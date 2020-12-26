@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.cpp
+Screen.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.h
+
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.h
+windows.h
+-
+cstdio
+-
+iostream
+-
+entities/Entity.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
+
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
+windows.h
+-
+string
+-
+../globals.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
+
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
+
