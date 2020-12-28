@@ -14,7 +14,7 @@ public:
     NpcEntity(const COORD &position, const COORD &size, int score);
 
 private:
-    virtual void collision(PlayerEntity &e) = 0;  //todo make true abstract
+    virtual void collision(PlayerEntity &e) = 0;
 };
 
 

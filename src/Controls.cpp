@@ -12,8 +12,8 @@ Controls::Controls(HANDLE hStdin) {
 }
 
 void Controls::handleInput(Entity &e) {
-    //GetConsoleMode(hStdin, &fdwOldMode);
-    //SetConsoleMode(hStdin, fdwOldMode | fdwMode);
+    GetConsoleMode(hStdin, &fdwOldMode);
+    SetConsoleMode(hStdin, fdwOldMode | fdwMode);
     GetNumberOfConsoleInputEvents(hStdin, &cNumToRead);
     if (cNumToRead > 0) {
         ReadConsoleInput(hStdin, irInBuf, 128, &cNumRead);
@@ -27,7 +27,7 @@ void Controls::handleInput(Entity &e) {
             }
         }
     }
-    //SetConsoleMode(hStdin, fdwOldMode);
+    SetConsoleMode(hStdin, fdwOldMode);
 }
 
 void Controls::procKeyEvent(KEY_EVENT_RECORD er, Entity &e) {

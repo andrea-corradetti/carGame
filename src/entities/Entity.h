@@ -19,19 +19,19 @@ public:
     virtual void moveDown();
 
     const COORD &getPosition() const;
+    const COORD &getOldPosition() const;
     const COORD &getSize() const;
     std::wstring *getPArt() const;
     const SMALL_RECT &getSrHitbox() const;
+    void setOldPosition(const COORD &oldPosition);
 protected:
     void updateSrHitbox();
-    COORD size;
-    COORD position;
-    SMALL_RECT srHitbox;
 
-protected:
     int score;
+    COORD size;
+    COORD position, oldPosition;
     std::wstring *pArt;
-
+    SMALL_RECT srHitbox;
 
 };
 

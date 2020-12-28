@@ -10,7 +10,7 @@
 
 class PlayerEntity : public Entity {
 public:
-    PlayerEntity(const COORD &position, const COORD &size, int score);
+    PlayerEntity(const COORD &position, int score);
 
     static std::wstring art[];
 

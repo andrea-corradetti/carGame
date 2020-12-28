@@ -5,14 +5,10 @@
 #include "PlayerEntity.h"
 
 
-std::wstring PlayerEntity::art[] = {L"aa", L"aa", L"aa"};
+std::wstring PlayerEntity::art[] = {L"aa", L"bb", L"cc"};
 
 
-
-PlayerEntity::PlayerEntity(const COORD &position, const COORD &size, int score) : Entity(position, size, score = 0) {
-/*    art = new std::wstring[3];
-    std::wstring temp[] = {L"aa", L"aa", L"aa"};
-    std::copy(temp, temp+3, art);*/
+PlayerEntity::PlayerEntity(const COORD &position, int score = 0) : Entity(position, {2, 3}, score) {
     pArt = art;
 }
 
