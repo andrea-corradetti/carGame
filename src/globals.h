@@ -5,9 +5,6 @@
 #ifndef UNTITLEDCARGAME_GLOBALS_H
 #define UNTITLEDCARGAME_GLOBALS_H
 
-extern int maxPositionX;
-extern int minPositionX;
-extern int maxPositionY;
-extern int minPositionY;
+extern SMALL_RECT gameArea;
 
 #endif //UNTITLEDCARGAME_GLOBALS_H

@@ -6,6 +6,14 @@ CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o: ../src/Controls.h
 CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o: ../src/entities/Entity.h
 CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o: ../src/globals.h
 
+CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o: ../src/EntityManager.cpp
+CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o: ../src/EntityManager.h
+CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o: ../src/entities/Entity.h
+CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o: ../src/entities/NpcEntity.h
+CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o: ../src/entities/PlayerEntity.h
+CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o: ../src/entities/TestEntity.h
+CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o: ../src/globals.h
+
 CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o: ../src/Screen.cpp
 CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o: ../src/Screen.h
 CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o: ../src/entities/Entity.h
@@ -34,6 +42,7 @@ CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.o: ../src/entities/Te
 CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.o: ../src/globals.h
 
 CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/Controls.h
+CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/EntityManager.h
 CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/Screen.h
 CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/entities/Entity.h
 CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/entities/NpcEntity.h

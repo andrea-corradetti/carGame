@@ -4,15 +4,19 @@
 
 #include "PlayerEntity.h"
 
+#define PLAYER_SIZE {2, 3}
 
 std::wstring PlayerEntity::art[] = {L"aa", L"bb", L"cc"};
 
-
-PlayerEntity::PlayerEntity(const COORD &position, int score = 0) : Entity(position, {2, 3}, score) {
+PlayerEntity::PlayerEntity(const COORD &position, unsigned int id, int score)
+    : Entity(position, PLAYER_SIZE, id, score) {
     pArt = art;
 }
 
-/*
 void PlayerEntity::collision(Entity &e) {
 
-}*/
+}
+
+void PlayerEntity::update() {
+
+}

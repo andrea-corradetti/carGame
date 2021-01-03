@@ -170,6 +170,33 @@ src/Controls.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.s
 .PHONY : src/Controls.cpp.s
 
+src/EntityManager.o: src/EntityManager.cpp.o
+
+.PHONY : src/EntityManager.o
+
+# target to build an object file
+src/EntityManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o
+.PHONY : src/EntityManager.cpp.o
+
+src/EntityManager.i: src/EntityManager.cpp.i
+
+.PHONY : src/EntityManager.i
+
+# target to preprocess a source file
+src/EntityManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.i
+.PHONY : src/EntityManager.cpp.i
+
+src/EntityManager.s: src/EntityManager.cpp.s
+
+.PHONY : src/EntityManager.s
+
+# target to generate assembly for a file
+src/EntityManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.s
+.PHONY : src/EntityManager.cpp.s
+
 src/Screen.o: src/Screen.cpp.o
 
 .PHONY : src/Screen.o
@@ -344,6 +371,9 @@ help:
 	@echo "... src/Controls.o"
 	@echo "... src/Controls.i"
 	@echo "... src/Controls.s"
+	@echo "... src/EntityManager.o"
+	@echo "... src/EntityManager.i"
+	@echo "... src/EntityManager.s"
 	@echo "... src/Screen.o"
 	@echo "... src/Screen.i"
 	@echo "... src/Screen.s"

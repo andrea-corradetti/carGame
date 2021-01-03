@@ -5,15 +5,20 @@
 #ifndef UNTITLEDCARGAME_TESTENTITY_H
 #define UNTITLEDCARGAME_TESTENTITY_H
 
+
 #include "Entity.h"
 #include "NpcEntity.h"
 
 class TestEntity : public NpcEntity {
 public:
-    TestEntity(const COORD &position, const COORD &size, int score);
-    void collision(PlayerEntity &e);
+    TestEntity(const COORD &position, const COORD &size, unsigned int id, int score);
+    void collision(Entity &e);
+    void update();
 private:
     std::wstring art = L"?";
+
+
+
 };
 
 

@@ -1,6 +1,5 @@
-#include <iostream>
 #include <windows.h>
-#include <array>
+#include <chrono>
 #include <unistd.h>
 
 #include "entities/Entity.h"
@@ -8,31 +7,59 @@
 #include "entities/PlayerEntity.h"
 #include "entities/TestEntity.h"
 #include "Controls.h"
+#include "EntityManager.h"
 #include "globals.h"
 
-int minPositionX = 0;
-int minPositionY = 0;
-int maxPositionX = 20;
-int maxPositionY = 20;
+
+SMALL_RECT gameArea = {
+        3,
+        3,
+        30,
+        20,
+};
+
+SMALL_RECT statsArea = {
+        33,
+        3,
+        53,
+        20
+};
+
 
 
 int main() {
-
-
-    PlayerEntity e({5, 5}, 0);
-    TestEntity t({8, 8}, {1, 1}, 0);
-
+    bool quit = false;
     Screen s(GetStdHandle(STD_INPUT_HANDLE), GetStdHandle(STD_OUTPUT_HANDLE));
     Controls c(GetStdHandle(STD_INPUT_HANDLE));
+    EntityManager em;
 
-    while(true) {
+    Entity *p = em.spawnEntity(player, {3, 10}, 10);
+    em.spawnEntity(test, {7 ,gameArea.Top});
+    em.spawnEntity(test, {9 ,gameArea.Top});
 
-            s.drawEntity(t);
-            s.drawEntity(e);
-            c.handleInput(e);
-            //s.clear();
-            s.update();
-            usleep(25000);
+    std::chrono::duration<double> t(0);
+    const auto dt = std::chrono::duration<double>(1./60);
+
+    auto start = std::chrono::steady_clock::now();
+    std::chrono::duration<double> accumulator(0);
+
+    while(!quit) {
+        auto end = std::chrono::steady_clock::now();
+        std::chrono::duration<double> frameTime = end - start;
+        accumulator += frameTime;
+
+        while (accumulator >= dt) {
+            c.handleInput(*p);
+            em.update();
+            em.handleCollisions(*p);
+            em.deleteExpired();
+            accumulator -= dt;
+            t += dt;
+        }
+        s.drawAreaBorder(gameArea);
+        s.drawAreaBorder(statsArea);
+        s.drawAll(em.getEMap());
+        s.update();
     }
 
 }

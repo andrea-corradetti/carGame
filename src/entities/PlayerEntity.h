@@ -10,7 +10,9 @@
 
 class PlayerEntity : public Entity {
 public:
-    PlayerEntity(const COORD &position, int score);
+    PlayerEntity(const COORD &position, unsigned int id, int score = 0);
+    void collision(Entity &e);
+    void update();
 
     static std::wstring art[];
 

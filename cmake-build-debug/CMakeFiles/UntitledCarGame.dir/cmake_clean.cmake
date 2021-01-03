@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o"
+  "CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/entities/NpcEntity.cpp.o"

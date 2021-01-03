@@ -4,4 +4,5 @@
 
 #include "NpcEntity.h"
 
-NpcEntity::NpcEntity(const COORD &position, const COORD &size, int score) : Entity(position, size, score) {}
+NpcEntity::NpcEntity(const COORD &position, const COORD &size, unsigned int id, int score)
+    : Entity(position, size, id, score) {}

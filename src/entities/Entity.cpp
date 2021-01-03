@@ -5,8 +5,10 @@
 #include "Entity.h"
 
 
-Entity::Entity(const COORD &position, const COORD &size, int score) : size(size), position(position), score(score), oldPosition(position) {
+Entity::Entity(const COORD &position, const COORD &size, unsigned const int id, int score)
+    : size(size), position(position), score(score), oldPosition(position), id(id) {
     updateSrHitbox();
+    expired = false;
 }
 
 
@@ -23,28 +25,28 @@ std::wstring *Entity::getPArt() const {
 }
 
 void Entity::moveRight() {
-    if (getSrHitbox().Right < maxPositionX) {
+    if (getSrHitbox().Right < gameArea.Right) {
         position.X++;
         updateSrHitbox();
     }
 }
 
 void Entity::moveLeft() {
-    if (getSrHitbox().Left > minPositionX) {
+    if (getSrHitbox().Left > gameArea.Left) {
         position.X--;
         updateSrHitbox();
     }
 }
 
 void Entity::moveUp() {
-    if (getSrHitbox().Top > minPositionY) {
+    if (getSrHitbox().Top > gameArea.Top) {
         position.Y--;
         updateSrHitbox();
     }
 }
 
 void Entity::moveDown() {
-    if (getSrHitbox().Bottom < maxPositionY) {
+    if (getSrHitbox().Bottom < gameArea.Bottom) {
         position.Y++;
         updateSrHitbox();
     }
@@ -52,9 +54,14 @@ void Entity::moveDown() {
 
 void Entity::updateSrHitbox() {
     srHitbox.Top = position.Y;
-    srHitbox.Bottom = position.Y + size.Y;
+    srHitbox.Bottom = position.Y + size.Y - 1;
     srHitbox.Left = position.X;
-    srHitbox.Right = position.X + size.X;
+    srHitbox.Right = position.X + size.X - 1;
+}
+
+bool Entity::intersect(Entity &e) {
+    SMALL_RECT a = this->getSrHitbox(), b = e.getSrHitbox();
+    return (a.Left <= b.Right && a.Right >= b.Left && a.Top <= b.Bottom && a.Bottom >= b.Top);
 }
 
 const SMALL_RECT &Entity::getSrHitbox() const {
@@ -66,8 +73,35 @@ const COORD &Entity::getOldPosition() const {
 }
 
 void Entity::setOldPosition(const COORD &oldPosition) {
-    Entity::oldPosition = oldPosition;
+    this->oldPosition = oldPosition;
 }
+
+unsigned int Entity::getId() const {
+    return id;
+}
+
+bool Entity::isExpired() const {
+    return expired;
+}
+
+int Entity::getScore() const {
+    return score;
+}
+
+void Entity::setScore(int score) {
+    Entity::score = score;
+}
+
+void Entity::checkExpired() {
+    if(! (srHitbox.Bottom >= gameArea.Top && srHitbox.Top <= gameArea.Bottom
+    && srHitbox.Left <= gameArea.Right && srHitbox.Right >= gameArea.Left)) {
+        expired = true;
+    }
+}
+
+
+
+
 
 
 

@@ -11,10 +11,10 @@
 
 class NpcEntity : public Entity{
 public:
-    NpcEntity(const COORD &position, const COORD &size, int score);
+    NpcEntity(const COORD &position, const COORD &size, unsigned int id, int score);
 
 private:
-    virtual void collision(PlayerEntity &e) = 0;
+
 };
 
 
