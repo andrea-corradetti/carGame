@@ -3,7 +3,8 @@
 //
 
 
-
+#include <list>
+#include <vector>
 #include "Screen.h"
 
 Screen::Screen(HANDLE hStdin, HANDLE hStdout) : hStdin(hStdin), hStdout(hStdout){
@@ -125,5 +126,38 @@ void Screen::drawAreaBorder(SMALL_RECT area) {
     wprintf(CSI L"%d;%df", area.Top, area.Right + 1); //right border
     drawVerticalLine(area.Bottom - area.Top + 1);
 
+}
+
+void Screen::eraseEntity(Entity &entity) {
+    short posY = entity.getPosition().Y;
+    short posX = entity.getPosition().X;
+    short sizeX = entity.getSize().X;
+    short sizeY = entity.getSize().Y;
+
+    wprintf(CSI L"%d;%df", posY, posX);
+    for (int y = 0; y < sizeY; y++) {
+        for (int i = 0; i < sizeX; i ++) putwchar(L' ');
+        //wprintf(L"%ls", sequence.c_str());
+        wprintf(CSI L"%dB", 1);
+        wprintf(CSI L"%dD", sizeX);
+    }
+
+    posY = entity.getOldPosition().Y;
+    posX = entity.getOldPosition().X;
+    wprintf(CSI L"%d;%df", posY, posX);
+    for (int y = 0; y < sizeY; y++) {
+        for (int i = 0; i < sizeX; i ++) putwchar(L' ');
+        //wprintf(L"%ls", sequence.c_str());
+        wprintf(CSI L"%dB", 1);
+        wprintf(CSI L"%dD", sizeX);
+    }
+}
+
+
+
+void Screen::eraseEntities(std::vector<Entity *> toErase) {
+    for (Entity* e : toErase) {
+        eraseEntity(*e);
+    }
 }
 

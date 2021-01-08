@@ -3,20 +3,22 @@
 //
 
 
+#include <vector>
 #include "EntityManager.h"
 
 
-Entity* EntityManager::spawnEntity(const entity_type type, COORD position, int score) {
+
+Entity * EntityManager::spawnEntity(const entity_type type, COORD position) {
     Entity* e;
     switch (type) {
         case player:
-            e = new PlayerEntity(position, nextId, score);
+            e = new PlayerEntity(position, nextId);
             break;
         case test:
-            e = new TestEntity(position, {1, 1} , nextId, 0);
+            e = new TestEntity(position, nextId);
             break;
         default:
-            e = new TestEntity(position, {1, 1} , nextId, 0);
+            e = new TestEntity(position, nextId);
             break;
     }
     nextId++;
@@ -32,18 +34,7 @@ EntityManager::EntityManager() {
     nextId = 1;
 }
 
-void EntityManager::deleteExpired() {
-    std::list<Entity*> toDelete;
-    for (std::map<int, Entity*>::value_type e : eMap) {
-        if(e.second->isExpired()) {
-            toDelete.insert(toDelete.end(), e.second);
-        }
-    }
-    for(Entity* e : toDelete) {
-        eMap.erase(e->getId());
-        delete e;
-    }
-}
+
 
 void EntityManager::handleCollisions(Entity& p) {
     for (std::map<int, Entity*>::value_type e : eMap) {
@@ -56,5 +47,23 @@ void EntityManager::handleCollisions(Entity& p) {
 void EntityManager::update() {
     for (std::map<int, Entity*>::value_type e : eMap) {
         e.second->update();
+    }
+}
+
+std::vector<Entity*> EntityManager::getExpiredEntities() {
+    std::vector<Entity*> toReturn;
+    for (std::map<int, Entity*>::value_type e : eMap) {
+        if(e.second->isExpired()) {
+            toReturn.push_back(e.second);
+        }
+    }
+    return toReturn;
+}
+
+
+void EntityManager::deleteEntities(std::vector<Entity *> toDelete) {
+    for(Entity* e : toDelete) {
+        eMap.erase(e->getId());
+        delete e;
     }
 }

@@ -28,12 +28,13 @@ private:
 public:
     EntityManager();
 
-    Entity* spawnEntity(entity_type type, COORD position, int score = 0);
-    void deleteExpired();
+    Entity *spawnEntity(entity_type type, COORD position);
     void handleCollisions(Entity& p);
     void update();
     const std::map<unsigned int, Entity*> &getEMap() const;
+    std::vector<Entity *> getExpiredEntities();
 
+    void deleteEntities(std::vector<Entity *> toDelete);
 };
 
 

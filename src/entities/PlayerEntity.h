@@ -10,7 +10,7 @@
 
 class PlayerEntity : public Entity {
 public:
-    PlayerEntity(const COORD &position, unsigned int id, int score = 0);
+    PlayerEntity(const COORD &position, unsigned int id);
     void collision(Entity &e);
     void update();
 

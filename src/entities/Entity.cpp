@@ -5,10 +5,15 @@
 #include "Entity.h"
 
 
-Entity::Entity(const COORD &position, const COORD &size, unsigned const int id, int score)
-    : size(size), position(position), score(score), oldPosition(position), id(id) {
+Entity::Entity(const COORD &position, const COORD &size, unsigned const int id)
+    : position(position), size(size), id(id) {
     updateSrHitbox();
+    oldPosition = position;
     expired = false;
+}
+
+Entity::~Entity() {
+    
 }
 
 
@@ -93,6 +98,7 @@ void Entity::setScore(int score) {
 }
 
 void Entity::checkExpired() {
+
     if(! (srHitbox.Bottom >= gameArea.Top && srHitbox.Top <= gameArea.Bottom
     && srHitbox.Left <= gameArea.Right && srHitbox.Right >= gameArea.Left)) {
         expired = true;

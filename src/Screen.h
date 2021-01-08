@@ -14,14 +14,15 @@
 #define ESC "\x1b"
 #define CSI "\x1b["
 
-#define BUFSIZE 1000
 
 class Screen {
 public:
     Screen(HANDLE hStdin, HANDLE hStdout);
     void clear();
-    void drawEntity(Entity &entity);
     void drawInterface();
+    void drawEntity(Entity &entity);
+    void eraseEntity(Entity &entity);
+    void eraseEntities(std::vector<Entity *> toErase);
     void drawAll(const std::map<unsigned int, Entity*>&);
     void update();
     const CONSOLE_SCREEN_BUFFER_INFO &getCsbiInfo() const;
@@ -35,8 +36,7 @@ private:
     void drawHorizontalLine(int size, bool isTop);
     void drawVerticalLine(int size);
     void drawStatSection();
-    //wchar_t screenBufA[BUFSIZE], screenBufB[BUFSIZE];
-    //wchar_t *currBuf, *nextBuf;
+
 
 };
 

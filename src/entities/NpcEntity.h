@@ -11,9 +11,11 @@
 
 class NpcEntity : public Entity{
 public:
-    NpcEntity(const COORD &position, const COORD &size, unsigned int id, int score);
+    NpcEntity(const COORD &position, const COORD&size, unsigned int id);
 
-private:
+protected:
+    std::chrono::duration<int, std::milli> coolDown;
+    std::chrono::steady_clock::time_point start;
 
 };
 

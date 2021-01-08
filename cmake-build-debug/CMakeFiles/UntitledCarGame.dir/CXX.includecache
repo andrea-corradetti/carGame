@@ -13,6 +13,8 @@ entities/Entity.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
 
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.cpp
+vector
+-
 EntityManager.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.h
 
@@ -30,6 +32,14 @@ entities/TestEntity.h
 entities/PlayerEntity.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.h
 
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.cpp
+list
+-
+vector
+-
+Screen.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.h
+
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.h
 cstdio
 -
@@ -41,6 +51,8 @@ entities/Entity.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
 
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
+chrono
+-
 windows.h
 -
 string
@@ -58,13 +70,7 @@ PlayerEntity.h
 Entity.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
 
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.cpp
-TestEntity.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.h
-
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.h
-chrono
--
 Entity.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
 NpcEntity.h
@@ -79,14 +85,12 @@ chrono
 -
 unistd.h
 -
+vector
+-
 entities/Entity.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
 Screen.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.h
-entities/PlayerEntity.h
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.h
-entities/TestEntity.h
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.h
 Controls.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Controls.h
 EntityManager.h

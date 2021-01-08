@@ -11,14 +11,11 @@
 
 class TestEntity : public NpcEntity {
 public:
-    TestEntity(const COORD &position, const COORD &size, unsigned int id, int score);
+    TestEntity(const COORD &position, unsigned int id);
     void collision(Entity &e);
     void update();
 private:
     std::wstring art = L"?";
-
-
-
 };
 
 

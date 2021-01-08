@@ -1,11 +1,10 @@
 #include <windows.h>
 #include <chrono>
 #include <unistd.h>
+#include <vector>
 
 #include "entities/Entity.h"
 #include "Screen.h"
-#include "entities/PlayerEntity.h"
-#include "entities/TestEntity.h"
 #include "Controls.h"
 #include "EntityManager.h"
 #include "globals.h"
@@ -33,9 +32,10 @@ int main() {
     Controls c(GetStdHandle(STD_INPUT_HANDLE));
     EntityManager em;
 
-    Entity *p = em.spawnEntity(player, {3, 10}, 10);
-    em.spawnEntity(test, {7 ,gameArea.Top});
-    em.spawnEntity(test, {9 ,gameArea.Top});
+    std::vector<Entity*> expiredEntities;
+    Entity *p = em.spawnEntity(player, {3, 10});
+    em.spawnEntity(test, {7, gameArea.Top});
+    em.spawnEntity(test, {9, gameArea.Top});
 
     std::chrono::duration<double> t(0);
     const auto dt = std::chrono::duration<double>(1./60);
@@ -48,11 +48,14 @@ int main() {
         std::chrono::duration<double> frameTime = end - start;
         accumulator += frameTime;
 
+
         while (accumulator >= dt) {
             c.handleInput(*p);
             em.update();
             em.handleCollisions(*p);
-            em.deleteExpired();
+            expiredEntities = em.getExpiredEntities();
+            s.eraseEntities(expiredEntities);
+            em.deleteEntities(expiredEntities);
             accumulator -= dt;
             t += dt;
         }
