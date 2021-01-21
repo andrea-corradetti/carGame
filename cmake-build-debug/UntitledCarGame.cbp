@@ -92,10 +92,22 @@
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelManager.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelManager.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Spawner.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Spawner.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.cpp">

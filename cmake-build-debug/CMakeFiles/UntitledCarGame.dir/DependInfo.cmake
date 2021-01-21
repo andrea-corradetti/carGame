@@ -6,7 +6,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Controls.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o"
+  "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelManager.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o"
+  "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Spawner.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/Spawner.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NpcEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/NpcEntity.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o"

@@ -39,7 +39,6 @@ int main() {
 
     std::chrono::duration<double> t(0);
     const auto dt = std::chrono::duration<double>(1./60);
-
     auto start = std::chrono::steady_clock::now();
     std::chrono::duration<double> accumulator(0);
 
@@ -48,10 +47,9 @@ int main() {
         std::chrono::duration<double> frameTime = end - start;
         accumulator += frameTime;
 
-
         while (accumulator >= dt) {
             c.handleInput(*p);
-            em.update();
+            em.update();        //TODO use dt
             em.handleCollisions(*p);
             expiredEntities = em.getExpiredEntities();
             s.eraseEntities(expiredEntities);
@@ -62,7 +60,7 @@ int main() {
         s.drawAreaBorder(gameArea);
         s.drawAreaBorder(statsArea);
         s.drawAll(em.getEMap());
-        s.update();
+        s.refresh();
     }
 
 }

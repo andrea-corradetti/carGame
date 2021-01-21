@@ -197,6 +197,33 @@ src/EntityManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.s
 .PHONY : src/EntityManager.cpp.s
 
+src/LevelManager.o: src/LevelManager.cpp.o
+
+.PHONY : src/LevelManager.o
+
+# target to build an object file
+src/LevelManager.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o
+.PHONY : src/LevelManager.cpp.o
+
+src/LevelManager.i: src/LevelManager.cpp.i
+
+.PHONY : src/LevelManager.i
+
+# target to preprocess a source file
+src/LevelManager.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.i
+.PHONY : src/LevelManager.cpp.i
+
+src/LevelManager.s: src/LevelManager.cpp.s
+
+.PHONY : src/LevelManager.s
+
+# target to generate assembly for a file
+src/LevelManager.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.s
+.PHONY : src/LevelManager.cpp.s
+
 src/Screen.o: src/Screen.cpp.o
 
 .PHONY : src/Screen.o
@@ -223,6 +250,33 @@ src/Screen.s: src/Screen.cpp.s
 src/Screen.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.s
 .PHONY : src/Screen.cpp.s
+
+src/Spawner.o: src/Spawner.cpp.o
+
+.PHONY : src/Spawner.o
+
+# target to build an object file
+src/Spawner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Spawner.cpp.o
+.PHONY : src/Spawner.cpp.o
+
+src/Spawner.i: src/Spawner.cpp.i
+
+.PHONY : src/Spawner.i
+
+# target to preprocess a source file
+src/Spawner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Spawner.cpp.i
+.PHONY : src/Spawner.cpp.i
+
+src/Spawner.s: src/Spawner.cpp.s
+
+.PHONY : src/Spawner.s
+
+# target to generate assembly for a file
+src/Spawner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Spawner.cpp.s
+.PHONY : src/Spawner.cpp.s
 
 src/entities/Entity.o: src/entities/Entity.cpp.o
 
@@ -374,9 +428,15 @@ help:
 	@echo "... src/EntityManager.o"
 	@echo "... src/EntityManager.i"
 	@echo "... src/EntityManager.s"
+	@echo "... src/LevelManager.o"
+	@echo "... src/LevelManager.i"
+	@echo "... src/LevelManager.s"
 	@echo "... src/Screen.o"
 	@echo "... src/Screen.i"
 	@echo "... src/Screen.s"
+	@echo "... src/Spawner.o"
+	@echo "... src/Spawner.i"
+	@echo "... src/Spawner.s"
 	@echo "... src/entities/Entity.o"
 	@echo "... src/entities/Entity.i"
 	@echo "... src/entities/Entity.s"

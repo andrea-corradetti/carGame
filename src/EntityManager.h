@@ -28,6 +28,7 @@ private:
 public:
     EntityManager();
 
+
     Entity *spawnEntity(entity_type type, COORD position);
     void handleCollisions(Entity& p);
     void update();

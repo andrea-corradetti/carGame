@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o"
+  "CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o"
+  "CMakeFiles/UntitledCarGame.dir/src/Spawner.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/entities/NpcEntity.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o"

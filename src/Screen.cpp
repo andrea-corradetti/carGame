@@ -64,7 +64,7 @@ void Screen::drawEntity(Entity &entity) {
     entity.setOldPosition(entity.getPosition());
 }
 
-void Screen::update() {
+void Screen::refresh() {
 //    std::swap(nextBuf, currBuf);
 //    memset(nextBuf, '\000', BUFSIZE);
 //    wprintf(L"%ls", currBuf);

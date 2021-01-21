@@ -24,7 +24,7 @@ public:
     void eraseEntity(Entity &entity);
     void eraseEntities(std::vector<Entity *> toErase);
     void drawAll(const std::map<unsigned int, Entity*>&);
-    void update();
+    void refresh();
     const CONSOLE_SCREEN_BUFFER_INFO &getCsbiInfo() const;
     void drawAreaBorder(SMALL_RECT area);
 
