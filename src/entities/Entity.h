@@ -15,15 +15,20 @@ class Entity {
 public:
     Entity(const COORD &position, const COORD &size, unsigned int id);
     ~Entity();
-    virtual void update() = 0;
-    virtual void collision(Entity &e) = 0;
+
+    virtual void update();
+    virtual void collision(Entity &e) = 0;  //todo write default implementation for npcs
+
     virtual void moveLeft();
     virtual void moveRight();
     virtual void moveUp();
     virtual void moveDown();
+
     bool intersect(Entity &e);
     virtual void checkExpired();
     /*getters and setters*/
+
+
     const COORD &getPosition() const;
     const COORD &getOldPosition() const;
     const COORD &getSize() const;
@@ -36,6 +41,8 @@ public:
     void setScore(int score);
 
 protected:
+
+
     void updateSrHitbox();
     int score;
     unsigned int id;

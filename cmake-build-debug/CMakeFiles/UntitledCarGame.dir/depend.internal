@@ -14,10 +14,27 @@ CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o
  /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.h
  /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.h
  /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
+CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelManager.cpp
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelManager.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NpcEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/Spawner.h
 CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o
  /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.cpp
  /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.h
  /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
+CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/CarEntity.cpp
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/CarEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NpcEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.h
  /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
 CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o
  /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.cpp
@@ -51,3 +68,23 @@ CMakeFiles/UntitledCarGame.dir/src/main.cpp.o
  /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.h
  /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
  /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/main.cpp
+CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/CarEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NpcEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/CarSpawner.cpp
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/CarSpawner.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/Spawner.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.o
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NpcEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/Spawner.cpp
+ /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/Spawner.h

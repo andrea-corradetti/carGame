@@ -12,6 +12,8 @@
 class NpcEntity : public Entity{
 public:
     NpcEntity(const COORD &position, const COORD&size, unsigned int id);
+    virtual void act() = 0;
+    void update() override;
 
 protected:
     std::chrono::duration<int, std::milli> coolDown;

@@ -7,6 +7,7 @@
 
 #include <map>
 #include <list>
+#include <functional>
 #include "entities/Entity.h"
 #include "entities/NpcEntity.h"
 #include "entities/TestEntity.h"
@@ -22,8 +23,9 @@ enum entity_type {
 
 class EntityManager {
 private:
-    std::map<unsigned int, Entity*> eMap;
+    std::map<unsigned int, Entity*> liveEntitiesMap;
     unsigned int nextId = 1;
+    static std::map<entity_type, std::function<Entity*(COORD, int)>> entityDict;
 
 public:
     EntityManager();
@@ -32,7 +34,7 @@ public:
     Entity *spawnEntity(entity_type type, COORD position);
     void handleCollisions(Entity& p);
     void update();
-    const std::map<unsigned int, Entity*> &getEMap() const;
+    const std::map<unsigned int, Entity*> &getLiveEntities() const;
     std::vector<Entity *> getExpiredEntities();
 
     void deleteEntities(std::vector<Entity *> toDelete);

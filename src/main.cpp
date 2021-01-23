@@ -59,7 +59,7 @@ int main() {
         }
         s.drawAreaBorder(gameArea);
         s.drawAreaBorder(statsArea);
-        s.drawAll(em.getEMap());
+        s.drawAll(em.getLiveEntities());
         s.refresh();
     }
 

@@ -7,8 +7,15 @@
 #include "EntityManager.h"
 
 
+std::map<entity_type, std::function<Entity*(COORD, int)>> EntityManager::entityDict =  {
+        {player, [](COORD position, int nextId) -> PlayerEntity* {return new PlayerEntity(position, nextId);}},
+        {test, [](COORD position, int nextId) -> TestEntity* {return new TestEntity(position, nextId);}},
+       // {car, [](COORD position, int nextId) -> PlayerEntity* {return new CarEntity(position, nextId);}},
+};
 
-Entity * EntityManager::spawnEntity(const entity_type type, COORD position) {
+
+
+/*Entity * EntityManager::spawnEntity(const entity_type type, COORD position) {
     Entity* e;
     switch (type) {
         case player:
@@ -22,12 +29,19 @@ Entity * EntityManager::spawnEntity(const entity_type type, COORD position) {
             break;
     }
     nextId++;
-    this->eMap.insert(std::pair<const unsigned int, Entity*> (e->getId(), e));
+    this->liveEntitiesMap.insert(std::pair<const unsigned int, Entity*> (e->getId(), e));
+    return e;
+}*/
+
+Entity * EntityManager::spawnEntity(const entity_type type, COORD position) {
+    Entity* e = entityDict[type].operator()(position, nextId);
+    nextId++;
+    this->liveEntitiesMap.insert(std::pair<const unsigned int, Entity*> (e->getId(), e));
     return e;
 }
 
-const std::map<unsigned int, Entity *> &EntityManager::getEMap() const {
-    return eMap;
+const std::map<unsigned int, Entity *> &EntityManager::getLiveEntities() const {
+    return liveEntitiesMap;
 }
 
 EntityManager::EntityManager() {
@@ -37,7 +51,7 @@ EntityManager::EntityManager() {
 
 
 void EntityManager::handleCollisions(Entity& p) {
-    for (std::map<int, Entity*>::value_type e : eMap) {
+    for (std::map<int, Entity*>::value_type e : liveEntitiesMap) {
         if(e.second != &p && e.second->intersect(p)) {
             e.second->collision(p);
         }
@@ -45,14 +59,14 @@ void EntityManager::handleCollisions(Entity& p) {
 }
 
 void EntityManager::update() {
-    for (std::map<int, Entity*>::value_type e : eMap) {
+    for (std::map<int, Entity*>::value_type e : liveEntitiesMap) {
         e.second->update();
     }
 }
 
 std::vector<Entity*> EntityManager::getExpiredEntities() {
     std::vector<Entity*> toReturn;
-    for (std::map<int, Entity*>::value_type e : eMap) {
+    for (std::map<int, Entity*>::value_type e : liveEntitiesMap) {
         if(e.second->isExpired()) {
             toReturn.push_back(e.second);
         }
@@ -63,7 +77,7 @@ std::vector<Entity*> EntityManager::getExpiredEntities() {
 
 void EntityManager::deleteEntities(std::vector<Entity *> toDelete) {
     for(Entity* e : toDelete) {
-        eMap.erase(e->getId());
+        liveEntitiesMap.erase(e->getId());
         delete e;
     }
 }

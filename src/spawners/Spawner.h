@@ -6,26 +6,32 @@
 #define UNTITLEDCARGAME_SPAWNER_H
 
 
-#include "EntityManager.h"
+#include "../EntityManager.h"
 #include <random>
 
 class Spawner {
 public:
     Spawner(EntityManager& em, entity_type type);
-    void update();
     void setSeed(unsigned int seed);
+    void tick();
 
 protected:
-    Entity* spawn(COORD position);
+    virtual Entity* spawn(COORD position) = 0;
     virtual COORD computePosition();
 
     const entity_type type;
     unsigned int seed;
     float rate;
+    static int nextId;
+public:
+    float getRate() const;
+
+    void setRate(float rate);
 
 private:
     EntityManager& em;
     std::mt19937 randGen;
+
 };
 
 

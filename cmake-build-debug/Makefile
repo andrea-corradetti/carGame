@@ -251,32 +251,32 @@ src/Screen.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.s
 .PHONY : src/Screen.cpp.s
 
-src/Spawner.o: src/Spawner.cpp.o
+src/entities/CarEntity.o: src/entities/CarEntity.cpp.o
 
-.PHONY : src/Spawner.o
+.PHONY : src/entities/CarEntity.o
 
 # target to build an object file
-src/Spawner.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Spawner.cpp.o
-.PHONY : src/Spawner.cpp.o
+src/entities/CarEntity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o
+.PHONY : src/entities/CarEntity.cpp.o
 
-src/Spawner.i: src/Spawner.cpp.i
+src/entities/CarEntity.i: src/entities/CarEntity.cpp.i
 
-.PHONY : src/Spawner.i
+.PHONY : src/entities/CarEntity.i
 
 # target to preprocess a source file
-src/Spawner.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Spawner.cpp.i
-.PHONY : src/Spawner.cpp.i
+src/entities/CarEntity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.i
+.PHONY : src/entities/CarEntity.cpp.i
 
-src/Spawner.s: src/Spawner.cpp.s
+src/entities/CarEntity.s: src/entities/CarEntity.cpp.s
 
-.PHONY : src/Spawner.s
+.PHONY : src/entities/CarEntity.s
 
 # target to generate assembly for a file
-src/Spawner.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Spawner.cpp.s
-.PHONY : src/Spawner.cpp.s
+src/entities/CarEntity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.s
+.PHONY : src/entities/CarEntity.cpp.s
 
 src/entities/Entity.o: src/entities/Entity.cpp.o
 
@@ -413,6 +413,60 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/spawners/CarSpawner.o: src/spawners/CarSpawner.cpp.o
+
+.PHONY : src/spawners/CarSpawner.o
+
+# target to build an object file
+src/spawners/CarSpawner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o
+.PHONY : src/spawners/CarSpawner.cpp.o
+
+src/spawners/CarSpawner.i: src/spawners/CarSpawner.cpp.i
+
+.PHONY : src/spawners/CarSpawner.i
+
+# target to preprocess a source file
+src/spawners/CarSpawner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.i
+.PHONY : src/spawners/CarSpawner.cpp.i
+
+src/spawners/CarSpawner.s: src/spawners/CarSpawner.cpp.s
+
+.PHONY : src/spawners/CarSpawner.s
+
+# target to generate assembly for a file
+src/spawners/CarSpawner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.s
+.PHONY : src/spawners/CarSpawner.cpp.s
+
+src/spawners/Spawner.o: src/spawners/Spawner.cpp.o
+
+.PHONY : src/spawners/Spawner.o
+
+# target to build an object file
+src/spawners/Spawner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.o
+.PHONY : src/spawners/Spawner.cpp.o
+
+src/spawners/Spawner.i: src/spawners/Spawner.cpp.i
+
+.PHONY : src/spawners/Spawner.i
+
+# target to preprocess a source file
+src/spawners/Spawner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.i
+.PHONY : src/spawners/Spawner.cpp.i
+
+src/spawners/Spawner.s: src/spawners/Spawner.cpp.s
+
+.PHONY : src/spawners/Spawner.s
+
+# target to generate assembly for a file
+src/spawners/Spawner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.s
+.PHONY : src/spawners/Spawner.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -434,9 +488,9 @@ help:
 	@echo "... src/Screen.o"
 	@echo "... src/Screen.i"
 	@echo "... src/Screen.s"
-	@echo "... src/Spawner.o"
-	@echo "... src/Spawner.i"
-	@echo "... src/Spawner.s"
+	@echo "... src/entities/CarEntity.o"
+	@echo "... src/entities/CarEntity.i"
+	@echo "... src/entities/CarEntity.s"
 	@echo "... src/entities/Entity.o"
 	@echo "... src/entities/Entity.i"
 	@echo "... src/entities/Entity.s"
@@ -452,6 +506,12 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/spawners/CarSpawner.o"
+	@echo "... src/spawners/CarSpawner.i"
+	@echo "... src/spawners/CarSpawner.s"
+	@echo "... src/spawners/Spawner.o"
+	@echo "... src/spawners/Spawner.i"
+	@echo "... src/spawners/Spawner.s"
 .PHONY : help
 
 

@@ -10,11 +10,14 @@ Entity::Entity(const COORD &position, const COORD &size, unsigned const int id)
     updateSrHitbox();
     oldPosition = position;
     expired = false;
+    //coolDown = std::chrono::duration<int, std::milli>(500);
+    //start = std::chrono::steady_clock::now();
 }
 
 Entity::~Entity() {
     
 }
+
 
 
 const COORD &Entity::getPosition() const {

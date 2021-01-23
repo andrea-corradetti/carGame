@@ -7,7 +7,7 @@
 
 #include <random>
 #include "EntityManager.h"
-#include "Spawner.h"
+#include "spawners/Spawner.h"
 
 class LevelManager {
 public:

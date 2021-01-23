@@ -13,7 +13,7 @@ class TestEntity : public NpcEntity {
 public:
     TestEntity(const COORD &position, unsigned int id);
     void collision(Entity &e);
-    void update();
+    void act() override;
 private:
     std::wstring art = L"?";
 };

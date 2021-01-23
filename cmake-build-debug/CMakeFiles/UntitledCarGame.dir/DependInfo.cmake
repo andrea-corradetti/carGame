@@ -8,12 +8,14 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelManager.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o"
-  "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Spawner.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/Spawner.cpp.o"
+  "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/CarEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NpcEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/NpcEntity.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/main.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/main.cpp.o"
+  "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/CarSpawner.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o"
+  "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/Spawner.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

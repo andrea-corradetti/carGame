@@ -4,9 +4,9 @@
 
 #include "LevelManager.h"
 
-Spawner* LevelManager::createSpawner(EntityManager &em, entity_type type) {
+/*Spawner* LevelManager::createSpawner(EntityManager &em, entity_type type) {
     return new Spawner(em, type);
-}
+}*/
 
 LevelManager::LevelManager() {
 
