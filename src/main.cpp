@@ -3,7 +3,7 @@
 #include <unistd.h>
 #include <vector>
 
-#include "entities/Entity.h"
+#include "entities/AbstractEntity.h"
 #include "Screen.h"
 #include "Controls.h"
 #include "EntityManager.h"
@@ -32,10 +32,11 @@ int main() {
     Controls c(GetStdHandle(STD_INPUT_HANDLE));
     EntityManager em;
 
-    std::vector<Entity*> expiredEntities;
-    Entity *p = em.spawnEntity(player, {3, 10});
+    std::vector<AbstractEntity*> expiredEntities;
+    AbstractEntity *p = em.spawnEntity(player, {3, 10});
     em.spawnEntity(test, {7, gameArea.Top});
     em.spawnEntity(test, {9, gameArea.Top});
+    em.spawnEntity(car, {8, gameArea.Top});
 
     std::chrono::duration<double> t(0);
     const auto dt = std::chrono::duration<double>(1./60);
@@ -49,17 +50,17 @@ int main() {
 
         while (accumulator >= dt) {
             c.handleInput(*p);
-            em.update();        //TODO use dt
-            em.handleCollisions(*p);
-            expiredEntities = em.getExpiredEntities();
+            AbstractEntity::updateAll();        //TODO use dt
+            AbstractEntity::handleCollisionsWith(*p);
+            expiredEntities = AbstractEntity::getExpiredEntities();
             s.eraseEntities(expiredEntities);
-            em.deleteEntities(expiredEntities);
+            AbstractEntity::deleteEntities(expiredEntities);
             accumulator -= dt;
             t += dt;
         }
         s.drawAreaBorder(gameArea);
         s.drawAreaBorder(statsArea);
-        s.drawAll(em.getLiveEntities());
+        s.drawAll(AbstractEntity::aliveMap);
         s.refresh();
     }
 

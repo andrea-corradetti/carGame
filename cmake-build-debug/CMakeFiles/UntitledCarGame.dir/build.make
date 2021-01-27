@@ -103,18 +103,18 @@ CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.s"
 	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.cpp -o CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.s
 
-CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
-CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o: ../src/entities/Entity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o -c /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.cpp
+CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
+CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.o: ../src/entities/AbstractEntity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.o -c /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.cpp
 
-CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.cpp > CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.i
+CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.cpp > CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.i
 
-CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.cpp -o CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.s
+CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.cpp -o CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.s
 
 CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
 CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.o: ../src/entities/TestEntity.cpp
@@ -181,35 +181,22 @@ CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.s"
 	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.cpp -o CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.s
 
-CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
-CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o: ../src/LevelManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o -c /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelManager.cpp
+CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
+CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/spawners/AbstractSpawner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o -c /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/AbstractSpawner.cpp
 
-CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelManager.cpp > CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.i
+CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/AbstractSpawner.cpp > CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.i
 
-CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelManager.cpp -o CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.s
-
-CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
-CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.o: ../src/spawners/Spawner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.o -c /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/Spawner.cpp
-
-CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/Spawner.cpp > CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.i
-
-CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/Spawner.cpp -o CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.s
+CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/AbstractSpawner.cpp -o CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.s
 
 CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
 CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o: ../src/spawners/CarSpawner.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o"
 	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o -c /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/CarSpawner.cpp
 
 CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.i: cmake_force
@@ -222,7 +209,7 @@ CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.s: cmake_force
 
 CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
 CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o: ../src/entities/CarEntity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o"
 	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o -c /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/CarEntity.cpp
 
 CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.i: cmake_force
@@ -233,39 +220,97 @@ CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.s"
 	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/CarEntity.cpp -o CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.s
 
+CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
+CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.o: ../src/entities/FuelEntity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.o -c /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/FuelEntity.cpp
+
+CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/FuelEntity.cpp > CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.i
+
+CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/FuelEntity.cpp -o CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.s
+
+CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
+CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.o: ../src/entities/NailEntity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.o -c /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NailEntity.cpp
+
+CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NailEntity.cpp > CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.i
+
+CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NailEntity.cpp -o CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.s
+
+CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
+CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o: ../src/spawners/FuelSpawner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o -c /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/FuelSpawner.cpp
+
+CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/FuelSpawner.cpp > CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.i
+
+CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/FuelSpawner.cpp -o CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.s
+
+CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: CMakeFiles/UntitledCarGame.dir/flags.make
+CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: ../src/spawners/NailSpawner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o"
+	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o -c /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/NailSpawner.cpp
+
+CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.i"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/NailSpawner.cpp > CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.i
+
+CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.s"
+	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/NailSpawner.cpp -o CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.s
+
 # Object files for target UntitledCarGame
 UntitledCarGame_OBJECTS = \
 "CMakeFiles/UntitledCarGame.dir/src/main.cpp.o" \
 "CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o" \
-"CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o" \
+"CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.o" \
 "CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.o" \
 "CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o" \
 "CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o" \
 "CMakeFiles/UntitledCarGame.dir/src/entities/NpcEntity.cpp.o" \
 "CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o" \
-"CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o" \
-"CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.o" \
+"CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o" \
 "CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o" \
-"CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o"
+"CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o" \
+"CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.o" \
+"CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.o" \
+"CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o" \
+"CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o"
 
 # External object files for target UntitledCarGame
 UntitledCarGame_EXTERNAL_OBJECTS =
 
 UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/main.cpp.o
 UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o
-UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o
+UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.o
 UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.o
 UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o
 UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o
 UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/entities/NpcEntity.cpp.o
 UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o
-UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o
-UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.o
+UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o
 UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o
 UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o
+UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.o
+UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.o
+UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o
+UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o
 UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/build.make
 UntitledCarGame.exe: CMakeFiles/UntitledCarGame.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable UntitledCarGame.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable UntitledCarGame.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/UntitledCarGame.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

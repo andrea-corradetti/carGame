@@ -6,13 +6,13 @@
 #define UNTITLEDCARGAME_TESTENTITY_H
 
 
-#include "Entity.h"
+#include "AbstractEntity.h"
 #include "NpcEntity.h"
 
 class TestEntity : public NpcEntity {
 public:
     TestEntity(const COORD &position, unsigned int id);
-    void collision(Entity &e);
+    void collision(AbstractEntity &other);
     void act() override;
 private:
     std::wstring art = L"?";

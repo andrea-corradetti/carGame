@@ -197,33 +197,6 @@ src/EntityManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.s
 .PHONY : src/EntityManager.cpp.s
 
-src/LevelManager.o: src/LevelManager.cpp.o
-
-.PHONY : src/LevelManager.o
-
-# target to build an object file
-src/LevelManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.o
-.PHONY : src/LevelManager.cpp.o
-
-src/LevelManager.i: src/LevelManager.cpp.i
-
-.PHONY : src/LevelManager.i
-
-# target to preprocess a source file
-src/LevelManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.i
-.PHONY : src/LevelManager.cpp.i
-
-src/LevelManager.s: src/LevelManager.cpp.s
-
-.PHONY : src/LevelManager.s
-
-# target to generate assembly for a file
-src/LevelManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/LevelManager.cpp.s
-.PHONY : src/LevelManager.cpp.s
-
 src/Screen.o: src/Screen.cpp.o
 
 .PHONY : src/Screen.o
@@ -250,6 +223,33 @@ src/Screen.s: src/Screen.cpp.s
 src/Screen.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.s
 .PHONY : src/Screen.cpp.s
+
+src/entities/AbstractEntity.o: src/entities/AbstractEntity.cpp.o
+
+.PHONY : src/entities/AbstractEntity.o
+
+# target to build an object file
+src/entities/AbstractEntity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.o
+.PHONY : src/entities/AbstractEntity.cpp.o
+
+src/entities/AbstractEntity.i: src/entities/AbstractEntity.cpp.i
+
+.PHONY : src/entities/AbstractEntity.i
+
+# target to preprocess a source file
+src/entities/AbstractEntity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.i
+.PHONY : src/entities/AbstractEntity.cpp.i
+
+src/entities/AbstractEntity.s: src/entities/AbstractEntity.cpp.s
+
+.PHONY : src/entities/AbstractEntity.s
+
+# target to generate assembly for a file
+src/entities/AbstractEntity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.s
+.PHONY : src/entities/AbstractEntity.cpp.s
 
 src/entities/CarEntity.o: src/entities/CarEntity.cpp.o
 
@@ -278,32 +278,59 @@ src/entities/CarEntity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.s
 .PHONY : src/entities/CarEntity.cpp.s
 
-src/entities/Entity.o: src/entities/Entity.cpp.o
+src/entities/FuelEntity.o: src/entities/FuelEntity.cpp.o
 
-.PHONY : src/entities/Entity.o
+.PHONY : src/entities/FuelEntity.o
 
 # target to build an object file
-src/entities/Entity.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.o
-.PHONY : src/entities/Entity.cpp.o
+src/entities/FuelEntity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.o
+.PHONY : src/entities/FuelEntity.cpp.o
 
-src/entities/Entity.i: src/entities/Entity.cpp.i
+src/entities/FuelEntity.i: src/entities/FuelEntity.cpp.i
 
-.PHONY : src/entities/Entity.i
+.PHONY : src/entities/FuelEntity.i
 
 # target to preprocess a source file
-src/entities/Entity.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.i
-.PHONY : src/entities/Entity.cpp.i
+src/entities/FuelEntity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.i
+.PHONY : src/entities/FuelEntity.cpp.i
 
-src/entities/Entity.s: src/entities/Entity.cpp.s
+src/entities/FuelEntity.s: src/entities/FuelEntity.cpp.s
 
-.PHONY : src/entities/Entity.s
+.PHONY : src/entities/FuelEntity.s
 
 # target to generate assembly for a file
-src/entities/Entity.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/Entity.cpp.s
-.PHONY : src/entities/Entity.cpp.s
+src/entities/FuelEntity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.s
+.PHONY : src/entities/FuelEntity.cpp.s
+
+src/entities/NailEntity.o: src/entities/NailEntity.cpp.o
+
+.PHONY : src/entities/NailEntity.o
+
+# target to build an object file
+src/entities/NailEntity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.o
+.PHONY : src/entities/NailEntity.cpp.o
+
+src/entities/NailEntity.i: src/entities/NailEntity.cpp.i
+
+.PHONY : src/entities/NailEntity.i
+
+# target to preprocess a source file
+src/entities/NailEntity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.i
+.PHONY : src/entities/NailEntity.cpp.i
+
+src/entities/NailEntity.s: src/entities/NailEntity.cpp.s
+
+.PHONY : src/entities/NailEntity.s
+
+# target to generate assembly for a file
+src/entities/NailEntity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/NailEntity.cpp.s
+.PHONY : src/entities/NailEntity.cpp.s
 
 src/entities/NpcEntity.o: src/entities/NpcEntity.cpp.o
 
@@ -413,6 +440,33 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/spawners/AbstractSpawner.o: src/spawners/AbstractSpawner.cpp.o
+
+.PHONY : src/spawners/AbstractSpawner.o
+
+# target to build an object file
+src/spawners/AbstractSpawner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o
+.PHONY : src/spawners/AbstractSpawner.cpp.o
+
+src/spawners/AbstractSpawner.i: src/spawners/AbstractSpawner.cpp.i
+
+.PHONY : src/spawners/AbstractSpawner.i
+
+# target to preprocess a source file
+src/spawners/AbstractSpawner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.i
+.PHONY : src/spawners/AbstractSpawner.cpp.i
+
+src/spawners/AbstractSpawner.s: src/spawners/AbstractSpawner.cpp.s
+
+.PHONY : src/spawners/AbstractSpawner.s
+
+# target to generate assembly for a file
+src/spawners/AbstractSpawner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.s
+.PHONY : src/spawners/AbstractSpawner.cpp.s
+
 src/spawners/CarSpawner.o: src/spawners/CarSpawner.cpp.o
 
 .PHONY : src/spawners/CarSpawner.o
@@ -440,32 +494,59 @@ src/spawners/CarSpawner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.s
 .PHONY : src/spawners/CarSpawner.cpp.s
 
-src/spawners/Spawner.o: src/spawners/Spawner.cpp.o
+src/spawners/FuelSpawner.o: src/spawners/FuelSpawner.cpp.o
 
-.PHONY : src/spawners/Spawner.o
+.PHONY : src/spawners/FuelSpawner.o
 
 # target to build an object file
-src/spawners/Spawner.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.o
-.PHONY : src/spawners/Spawner.cpp.o
+src/spawners/FuelSpawner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o
+.PHONY : src/spawners/FuelSpawner.cpp.o
 
-src/spawners/Spawner.i: src/spawners/Spawner.cpp.i
+src/spawners/FuelSpawner.i: src/spawners/FuelSpawner.cpp.i
 
-.PHONY : src/spawners/Spawner.i
+.PHONY : src/spawners/FuelSpawner.i
 
 # target to preprocess a source file
-src/spawners/Spawner.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.i
-.PHONY : src/spawners/Spawner.cpp.i
+src/spawners/FuelSpawner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.i
+.PHONY : src/spawners/FuelSpawner.cpp.i
 
-src/spawners/Spawner.s: src/spawners/Spawner.cpp.s
+src/spawners/FuelSpawner.s: src/spawners/FuelSpawner.cpp.s
 
-.PHONY : src/spawners/Spawner.s
+.PHONY : src/spawners/FuelSpawner.s
 
 # target to generate assembly for a file
-src/spawners/Spawner.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/Spawner.cpp.s
-.PHONY : src/spawners/Spawner.cpp.s
+src/spawners/FuelSpawner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.s
+.PHONY : src/spawners/FuelSpawner.cpp.s
+
+src/spawners/NailSpawner.o: src/spawners/NailSpawner.cpp.o
+
+.PHONY : src/spawners/NailSpawner.o
+
+# target to build an object file
+src/spawners/NailSpawner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o
+.PHONY : src/spawners/NailSpawner.cpp.o
+
+src/spawners/NailSpawner.i: src/spawners/NailSpawner.cpp.i
+
+.PHONY : src/spawners/NailSpawner.i
+
+# target to preprocess a source file
+src/spawners/NailSpawner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.i
+.PHONY : src/spawners/NailSpawner.cpp.i
+
+src/spawners/NailSpawner.s: src/spawners/NailSpawner.cpp.s
+
+.PHONY : src/spawners/NailSpawner.s
+
+# target to generate assembly for a file
+src/spawners/NailSpawner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.s
+.PHONY : src/spawners/NailSpawner.cpp.s
 
 # Help Target
 help:
@@ -482,18 +563,21 @@ help:
 	@echo "... src/EntityManager.o"
 	@echo "... src/EntityManager.i"
 	@echo "... src/EntityManager.s"
-	@echo "... src/LevelManager.o"
-	@echo "... src/LevelManager.i"
-	@echo "... src/LevelManager.s"
 	@echo "... src/Screen.o"
 	@echo "... src/Screen.i"
 	@echo "... src/Screen.s"
+	@echo "... src/entities/AbstractEntity.o"
+	@echo "... src/entities/AbstractEntity.i"
+	@echo "... src/entities/AbstractEntity.s"
 	@echo "... src/entities/CarEntity.o"
 	@echo "... src/entities/CarEntity.i"
 	@echo "... src/entities/CarEntity.s"
-	@echo "... src/entities/Entity.o"
-	@echo "... src/entities/Entity.i"
-	@echo "... src/entities/Entity.s"
+	@echo "... src/entities/FuelEntity.o"
+	@echo "... src/entities/FuelEntity.i"
+	@echo "... src/entities/FuelEntity.s"
+	@echo "... src/entities/NailEntity.o"
+	@echo "... src/entities/NailEntity.i"
+	@echo "... src/entities/NailEntity.s"
 	@echo "... src/entities/NpcEntity.o"
 	@echo "... src/entities/NpcEntity.i"
 	@echo "... src/entities/NpcEntity.s"
@@ -506,12 +590,18 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/spawners/AbstractSpawner.o"
+	@echo "... src/spawners/AbstractSpawner.i"
+	@echo "... src/spawners/AbstractSpawner.s"
 	@echo "... src/spawners/CarSpawner.o"
 	@echo "... src/spawners/CarSpawner.i"
 	@echo "... src/spawners/CarSpawner.s"
-	@echo "... src/spawners/Spawner.o"
-	@echo "... src/spawners/Spawner.i"
-	@echo "... src/spawners/Spawner.s"
+	@echo "... src/spawners/FuelSpawner.o"
+	@echo "... src/spawners/FuelSpawner.i"
+	@echo "... src/spawners/FuelSpawner.s"
+	@echo "... src/spawners/NailSpawner.o"
+	@echo "... src/spawners/NailSpawner.i"
+	@echo "... src/spawners/NailSpawner.s"
 .PHONY : help
 
 

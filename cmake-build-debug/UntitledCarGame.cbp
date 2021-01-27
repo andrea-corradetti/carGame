@@ -92,16 +92,16 @@
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelManager.cpp">
-			<Option target="UntitledCarGame"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelManager.h">
-			<Option target="UntitledCarGame"/>
-		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/CarEntity.cpp">
@@ -110,10 +110,16 @@
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/CarEntity.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.cpp">
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/FuelEntity.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/Entity.h">
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/FuelEntity.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NailEntity.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NailEntity.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NpcEntity.cpp">
@@ -140,16 +146,28 @@
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/main.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/AbstractSpawner.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/AbstractSpawner.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/CarSpawner.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/CarSpawner.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/Spawner.cpp">
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/FuelSpawner.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/Spawner.h">
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/FuelSpawner.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/NailSpawner.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/NailSpawner.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/CMakeLists.txt">

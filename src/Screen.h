@@ -9,7 +9,7 @@
 #include <iostream>
 #include <map>
 
-#include "entities/Entity.h"
+#include "entities/AbstractEntity.h"
 
 #define ESC "\x1b"
 #define CSI "\x1b["
@@ -20,10 +20,10 @@ public:
     Screen(HANDLE hStdin, HANDLE hStdout);
     void clear();
     void drawInterface();
-    void drawEntity(Entity &entity);
-    void eraseEntity(Entity &entity);
-    void eraseEntities(std::vector<Entity *> toErase);
-    void drawAll(const std::map<unsigned int, Entity*>&);
+    void drawEntity(AbstractEntity &entity);
+    void eraseEntity(AbstractEntity &entity);
+    void eraseEntities(std::vector<AbstractEntity *> toErase);
+    void drawAll(const std::map<unsigned int, AbstractEntity*>&);
     void refresh();
     const CONSOLE_SCREEN_BUFFER_INFO &getCsbiInfo() const;
     void drawAreaBorder(SMALL_RECT area);

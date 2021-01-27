@@ -6,12 +6,12 @@
 #define UNTITLEDCARGAME_CONTROLS_H
 
 #include <windows.h>
-#include "entities/Entity.h"
+#include "entities/AbstractEntity.h"
 
 class Controls {
 public:
     Controls(HANDLE hStdin);
-    void handleInput(Entity &e);
+    void handleInput(AbstractEntity &e);
 
 private:
     HANDLE hStdin;
@@ -19,7 +19,7 @@ private:
     const DWORD fdwMode = ENABLE_WINDOW_INPUT | ENABLE_MOUSE_INPUT;
     INPUT_RECORD irInBuf[128];
 
-    void procKeyEvent(KEY_EVENT_RECORD er, Entity &e);
+    void procKeyEvent(KEY_EVENT_RECORD er, AbstractEntity &e);
 
 };
 

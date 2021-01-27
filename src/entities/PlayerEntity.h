@@ -6,16 +6,19 @@
 #define UNTITLEDCARGAME_PLAYERENTITY_H
 
 
-#include "Entity.h"
+#include "AbstractEntity.h"
 
-class PlayerEntity : public Entity {
+class PlayerEntity : public AbstractEntity {
 public:
     PlayerEntity(const COORD &position, unsigned int id);
-    void collision(Entity &e);
-    void update();
-
+    void collision(AbstractEntity &other) override;
+    void update() override;
+    unsigned int hp;
+    unsigned int fuel;
     static std::wstring art[];
 
+private:
+    int score;
 };
 
 

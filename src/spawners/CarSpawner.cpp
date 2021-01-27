@@ -12,6 +12,8 @@ COORD CarSpawner::computePosition() {
     return {5 ,5}; //todo implement correct position
 }
 
-CarSpawner::CarSpawner(EntityManager &em, entity_type type) : Spawner(em, type) {
-    rate = .2;
+CarSpawner::CarSpawner(unsigned int seed) : AbstractSpawner(car, seed) {
+    baseRate = .2;
 }
+
+

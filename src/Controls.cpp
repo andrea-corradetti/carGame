@@ -11,7 +11,7 @@ Controls::Controls(HANDLE hStdin) {
     GetConsoleMode(hStdin, &fdwOldMode);
 }
 
-void Controls::handleInput(Entity &e) {
+void Controls::handleInput(AbstractEntity &e) {
     GetConsoleMode(hStdin, &fdwOldMode);
     SetConsoleMode(hStdin, fdwOldMode | fdwMode);
     GetNumberOfConsoleInputEvents(hStdin, &cNumToRead);
@@ -30,7 +30,7 @@ void Controls::handleInput(Entity &e) {
     SetConsoleMode(hStdin, fdwOldMode);
 }
 
-void Controls::procKeyEvent(KEY_EVENT_RECORD er, Entity &e) {
+void Controls::procKeyEvent(KEY_EVENT_RECORD er, AbstractEntity &e) {
     switch (er.wVirtualKeyCode) {
         case VK_LEFT:
             e.moveLeft();

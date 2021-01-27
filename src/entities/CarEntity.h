@@ -13,8 +13,7 @@ class CarEntity : public NpcEntity {
 
 public:
     CarEntity(const COORD &position, unsigned int id);
-
-    void collision(Entity &e) override;
+    void collision(AbstractEntity &other) override;
 
     static std::wstring art[];
 

@@ -5,7 +5,7 @@
 #include "NpcEntity.h"
 
 NpcEntity::NpcEntity(const COORD &position, const COORD& size, unsigned int id)
-    : Entity(position, size, id) {
+    : AbstractEntity(position, size, id) {
     start = std::chrono::steady_clock::now();
 }
 
@@ -19,3 +19,16 @@ void NpcEntity::update() {
     }
     checkExpired();
 }
+
+void NpcEntity::act() {
+    moveDown();
+}
+
+int NpcEntity::getValue() const {
+    return value;
+}
+
+void NpcEntity::setValue(int value) {
+    NpcEntity::value = value;
+}
+

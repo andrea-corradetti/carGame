@@ -3,18 +3,18 @@
 //
 
 #include "TestEntity.h"
-
+#include "NpcEntity.h"
 
 
 TestEntity::TestEntity(const COORD &position, unsigned int id)
 : NpcEntity(position, {1, 1}, id) {
     pArt = &art;
-    setScore(10);
+    value = 10;
     coolDown = std::chrono::duration<int, std::milli>(500);
 }
 
-void TestEntity::collision(Entity &e) {
-    e.setScore(e.getScore() + this->score);
+void TestEntity::collision(AbstractEntity &other) {
+    //other.setScore(other.getScore() + this->value);
     expired = true;
 }
 

@@ -33,7 +33,7 @@ Screen::Screen(HANDLE hStdin, HANDLE hStdout) : hStdin(hStdin), hStdout(hStdout)
 
 }
 
-void Screen::drawEntity(Entity &entity) {
+void Screen::drawEntity(AbstractEntity &entity) {
     short posX = entity.getPosition().X;
     short posY = entity.getPosition().Y;
     short posX_old = entity.getOldPosition().X;
@@ -79,8 +79,8 @@ const CONSOLE_SCREEN_BUFFER_INFO &Screen::getCsbiInfo() const {
     return csbiInfo;
 }
 
-void Screen::drawAll(const std::map<unsigned int, Entity*>& eMap) {
-    for (std::map<int, Entity*>::value_type e : eMap) {
+void Screen::drawAll(const std::map<unsigned int, AbstractEntity*>& eMap) {
+    for (std::map<int, AbstractEntity*>::value_type e : eMap) {
         drawEntity(*e.second);
     }
 }
@@ -128,7 +128,7 @@ void Screen::drawAreaBorder(SMALL_RECT area) {
 
 }
 
-void Screen::eraseEntity(Entity &entity) {
+void Screen::eraseEntity(AbstractEntity &entity) {
     short posY = entity.getPosition().Y;
     short posX = entity.getPosition().X;
     short sizeX = entity.getSize().X;
@@ -155,8 +155,8 @@ void Screen::eraseEntity(Entity &entity) {
 
 
 
-void Screen::eraseEntities(std::vector<Entity *> toErase) {
-    for (Entity* e : toErase) {
+void Screen::eraseEntities(std::vector<AbstractEntity *> toErase) {
+    for (AbstractEntity* e : toErase) {
         eraseEntity(*e);
     }
 }

@@ -6,13 +6,13 @@
 #define UNTITLEDCARGAME_CARSPAWNER_H
 
 
-#include "Spawner.h"
+#include "AbstractSpawner.h"
 #include "../entities/CarEntity.h"
 
 
-class CarSpawner : public Spawner{
+class CarSpawner : public AbstractSpawner{
 public:
-    CarSpawner(EntityManager &em, entity_type type);
+    CarSpawner(unsigned int seed);
 
 private:
     CarEntity* spawn(COORD position) override;

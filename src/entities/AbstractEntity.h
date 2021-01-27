@@ -2,29 +2,37 @@
 // Created by Andrea on 21/12/2020.
 //
 
-#ifndef UNTITLEDCARGAME_ENTITY_H
-#define UNTITLEDCARGAME_ENTITY_H
+#ifndef UNTITLEDCARGAME_ABSTRACTENTITY_H
+#define UNTITLEDCARGAME_ABSTRACTENTITY_H
 
 #include <chrono>
 #include <windows.h>
 #include <string>
+#include <map>
+#include <vector>
 
 #include "../globals.h"
 
-class Entity {
+
+class AbstractEntity {
 public:
-    Entity(const COORD &position, const COORD &size, unsigned int id);
-    ~Entity();
+    AbstractEntity(const COORD &position, const COORD &size, unsigned int id);
+    ~AbstractEntity();
 
     virtual void update();
-    virtual void collision(Entity &e) = 0;  //todo write default implementation for npcs
+    virtual void collision(AbstractEntity &other) = 0;  //todo maybe it should work only for pcs
+
+    static void handleCollisionsWith(AbstractEntity& p);
+    static std::vector<AbstractEntity *> getExpiredEntities();
+    static void updateAll();
+    static void deleteEntities(std::vector<AbstractEntity *> toDelete);
 
     virtual void moveLeft();
     virtual void moveRight();
     virtual void moveUp();
     virtual void moveDown();
 
-    bool intersect(Entity &e);
+    bool intersect(AbstractEntity &other) const;
     virtual void checkExpired();
     /*getters and setters*/
 
@@ -37,14 +45,13 @@ public:
     unsigned int getId() const;
     bool isExpired() const;
     void setOldPosition(const COORD &oldPosition);
-    int getScore() const;
-    void setScore(int score);
+
+    static std::map<unsigned int, AbstractEntity*> aliveMap;
 
 protected:
 
-
     void updateSrHitbox();
-    int score;
+
     unsigned int id;
     bool expired;
     COORD size;
@@ -56,4 +63,4 @@ protected:
 };
 
 
-#endif //UNTITLEDCARGAME_ENTITY_H
+#endif //UNTITLEDCARGAME_ABSTRACTENTITY_H
