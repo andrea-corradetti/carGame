@@ -36,11 +36,7 @@ vector
 ../globals.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
 
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/FuelEntity.h
-NpcEntity.h
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NpcEntity.h
-
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NailEntity.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/CarEntity.h
 NpcEntity.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NpcEntity.h
 
@@ -80,27 +76,15 @@ NpcEntity.h
 random
 -
 
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/FuelSpawner.cpp
-FuelSpawner.h
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/FuelSpawner.h
-../entities/FuelEntity.h
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/FuelEntity.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/CarSpawner.cpp
+CarSpawner.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/CarSpawner.h
 
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/FuelSpawner.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/CarSpawner.h
+random
+-
 AbstractSpawner.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/AbstractSpawner.h
-../entities/FuelEntity.h
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/FuelEntity.h
-
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/NailSpawner.cpp
-NailSpawner.h
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/NailSpawner.h
-../entities/NailEntity.h
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NailEntity.h
-
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/NailSpawner.h
-AbstractSpawner.h
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/AbstractSpawner.h
-../entities/NailEntity.h
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/NailEntity.h
+../entities/CarEntity.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/CarEntity.h
 

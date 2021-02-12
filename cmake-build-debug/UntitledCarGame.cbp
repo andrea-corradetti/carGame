@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/CollisionHandler.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/CollisionHandler.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Controls.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
@@ -90,6 +96,18 @@
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Level.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Level.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelFactory.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelFactory.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.cpp">
@@ -138,6 +156,9 @@
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/gameState.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h">

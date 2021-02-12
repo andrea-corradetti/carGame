@@ -14,11 +14,9 @@ public:
     FuelEntity(const COORD &position, unsigned int id);
 
 private:
+    void collisionWith(AbstractEntity &other) override;
 
-    void collision(AbstractEntity &other) override;
-    void collision(PlayerEntity &e);
-
-
+    static std::wstring art[];
 };
 
 

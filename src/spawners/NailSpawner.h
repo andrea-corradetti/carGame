@@ -6,14 +6,28 @@
 #define UNTITLEDCARGAME_NAILSPAWNER_H
 
 
+#include <random>
 #include "AbstractSpawner.h"
 #include "../entities/NailEntity.h"
+#include "../EntityManager.h"
 
 class NailSpawner: public AbstractSpawner {
+    NailSpawner(unsigned int seed);
+
+
 protected:
-    NailEntity *spawn(COORD position) override;
+
+    NailEntity *spawnAt(COORD position) override;
 
     COORD computePosition() override;
+
+public:
+    void updateRateMultiplier(unsigned int currentLevelNo) override;
+
+protected:
+    float computeSpawnRate() override;
+
+    static const float baseRate;
 };
 
 

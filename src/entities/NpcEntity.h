@@ -17,20 +17,31 @@
 
 class NpcEntity : public AbstractEntity{
 public:
-    NpcEntity(const COORD &position, const COORD& size, unsigned int id);
+    NpcEntity(const COORD &position, const COORD &size, unsigned int id, duration coolDown);
+    void update(duration dt) override;
     virtual void act();
-    void update() override;
 
+    void moveLeft() override;
+
+    void moveRight() override;
+
+    void moveUp() override;
+
+    void moveDown() override;
 
 protected:
-    std::chrono::duration<int, std::milli> coolDown;
-    std::chrono::steady_clock::time_point start;
+    duration timeElapsed;
+    duration coolDown;
+    //std::chrono::steady_clock::time_point start;
+
+
 
     int value;
 public:
     int getValue() const;
 
     void setValue(int value);
+
 };
 
 

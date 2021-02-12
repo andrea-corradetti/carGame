@@ -21,28 +21,71 @@ PlayerEntity::PlayerEntity(const COORD &position, unsigned int id)
 
 }
 
-void PlayerEntity::collision(AbstractEntity &other) {
+//FIXME strange collision teleportation
+void PlayerEntity::collisionWith(AbstractEntity &other) {
     // dynamic_cast to a pointer type returns NULL if the cast fails
     // (dynamic_cast to a reference type would throw an exception on failure)
     if (auto car = dynamic_cast<CarEntity*>(&other)) {
-        if (other.getOldPosition().X < this->position.X) {
-            this->position.X++;
-        } else if (other.getOldPosition().X > this->position.X) {
-            this->position.X--;
+        if (other.getOldPosition().X < this->getOldPosition().X) {
+            moveRight();
+        } else if (other.getOldPosition().X > this->getOldPosition().X) {
+            moveLeft();
         }
-        this->score -= car->getValue();
+
+        if (hitbox.Bottom <= car->getHitbox().Top) {
+            moveUp();
+        } else if (hitbox.Top >= car->getHitbox().Bottom) {
+            moveDown();
+        }
+        this->score += car->getValue();
         this->hp -= 1;
+
     } else if (auto fuel = dynamic_cast<FuelEntity*>(&other)) {
-        this->score -= fuel->getValue();
+        this->score += fuel->getValue();
         this->fuel += fuel->getValue();
+
     } else if (auto nail = dynamic_cast<NailEntity*>(&other)) {
         this->score -= nail->getValue();
         this->hp -= 1;
+
     } else {
 
     }
 }
 
-void PlayerEntity::update() {
+void PlayerEntity::update(duration dt) {
+    //todo move movement logic here
+}
 
+
+void PlayerEntity::moveRight() {
+    if (getHitbox().Right < gameArea.Right) {
+        position.X++;
+        updateHitbox();
+    }
+}
+
+void PlayerEntity::moveLeft() {
+    if (getHitbox().Left > gameArea.Left) {
+        position.X--;
+        updateHitbox();
+    }
+}
+
+void PlayerEntity::moveUp() {
+    if (getHitbox().Top > gameArea.Top) {
+        position.Y--;
+        updateHitbox();
+    }
+}
+
+void PlayerEntity::moveDown() {
+    if (getHitbox().Bottom < gameArea.Bottom) {
+        position.Y++;
+        updateHitbox();
+    }
+}
+
+int PlayerEntity::getScore() const {
+    return score;
 }

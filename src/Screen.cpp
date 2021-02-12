@@ -6,6 +6,8 @@
 #include <list>
 #include <vector>
 #include "Screen.h"
+#include "entities/PlayerEntity.h"
+
 
 Screen::Screen(HANDLE hStdin, HANDLE hStdout) : hStdin(hStdin), hStdout(hStdout){
     GetConsoleScreenBufferInfo(hStdout, &csbiInfo);
@@ -25,7 +27,6 @@ Screen::Screen(HANDLE hStdin, HANDLE hStdout) : hStdin(hStdin), hStdout(hStdout)
     if (!SetConsoleMode(hStdout, dwOutMode)) {
         std::cout << "error hstdout\n";
     }
-
 
     wprintf(L"%s?25l", CSI);    //hide cursor
     fflush(stdout);
@@ -61,13 +62,10 @@ void Screen::drawEntity(AbstractEntity &entity) {
         wprintf(CSI L"%dD", sizeX);
     }
 
-    entity.setOldPosition(entity.getPosition());
+    entity.setOldPosition(entity.getPosition());    //todo move inside entity class
 }
 
 void Screen::refresh() {
-//    std::swap(nextBuf, currBuf);
-//    memset(nextBuf, '\000', BUFSIZE);
-//    wprintf(L"%ls", currBuf);
     fflush(stdout);
 }
 
@@ -159,5 +157,44 @@ void Screen::eraseEntities(std::vector<AbstractEntity *> toErase) {
     for (AbstractEntity* e : toErase) {
         eraseEntity(*e);
     }
+}
+
+void Screen::draw(gameState currGameState) {
+    switch (currGameState) {
+        case gameState::intro:
+            //drawIntro();
+            break;
+        case gameState::menu:
+            //drawMenu();
+            break;
+        case gameState::running:
+            drawAreaBorder(gameArea);
+            drawAreaBorder(statsArea);
+            eraseEntities(AbstractEntity::expiredEntities);
+            drawAll(AbstractEntity::aliveEntities);
+            break;
+
+    }
+    refresh();
+}
+
+void Screen::draw() {
+    drawAreaBorder(gameArea);
+    drawAreaBorder(statsArea);
+    eraseEntities(AbstractEntity::expiredEntities);
+    drawAll(AbstractEntity::aliveEntities);
+    drawStatSection();
+
+    refresh();
+}
+
+void Screen::drawStatSection() {
+    PlayerEntity* player = dynamic_cast<PlayerEntity *>(AbstractEntity::aliveEntities.at(1)); //todo consider changing player visibility
+    wprintf(CSI L"%d;%df", statsArea.Top + 1, statsArea.Left + 1); //set cursor for first line
+    wprintf(L"SCORE: %d", player->getScore());
+    wprintf(CSI L"%d;%df", statsArea.Top + 3, statsArea.Left + 1);
+    wprintf(L"HEALTH: %d", player->hp);
+    wprintf(CSI L"%d;%df", statsArea.Top + 5, statsArea.Left + 1);
+    wprintf(L"FUEL: %d", player->fuel);
 }
 

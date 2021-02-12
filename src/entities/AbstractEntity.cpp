@@ -4,20 +4,21 @@
 
 #include "AbstractEntity.h"
 
-std::map<unsigned int, AbstractEntity*> AbstractEntity::aliveMap;
+std::map<unsigned int, AbstractEntity*> AbstractEntity::aliveEntities;
+std::vector<AbstractEntity*> AbstractEntity::expiredEntities;
 
 AbstractEntity::AbstractEntity(const COORD &position, const COORD &size, unsigned const int id)
     : position(position), size(size), id(id) {
-    updateSrHitbox();
+    updateHitbox();
     oldPosition = position;
     expired = false;
     //coolDown = std::chrono::duration<int, std::milli>(500);
     //start = std::chrono::steady_clock::now();
-    AbstractEntity::aliveMap.insert(std::pair<const unsigned int, AbstractEntity*> (id, this));
+    AbstractEntity::aliveEntities.insert(std::pair<const unsigned int, AbstractEntity*> (id, this));
 }
 
 AbstractEntity::~AbstractEntity() {
-    AbstractEntity::aliveMap.erase(this->getId());
+    AbstractEntity::aliveEntities.erase(this->getId());
 }
 
 
@@ -33,48 +34,21 @@ std::wstring *AbstractEntity::getPArt() const {
     return pArt;
 }
 
-void AbstractEntity::moveRight() {
-    if (getSrHitbox().Right < gameArea.Right) {
-        position.X++;
-        updateSrHitbox();
-    }
-}
 
-void AbstractEntity::moveLeft() {
-    if (getSrHitbox().Left > gameArea.Left) {
-        position.X--;
-        updateSrHitbox();
-    }
-}
-
-void AbstractEntity::moveUp() {
-    if (getSrHitbox().Top > gameArea.Top) {
-        position.Y--;
-        updateSrHitbox();
-    }
-}
-
-void AbstractEntity::moveDown() {
-    if (getSrHitbox().Bottom < gameArea.Bottom) {
-        position.Y++;
-        updateSrHitbox();
-    }
-}
-
-void AbstractEntity::updateSrHitbox() {
-    srHitbox.Top = position.Y;
-    srHitbox.Bottom = position.Y + size.Y - 1;
-    srHitbox.Left = position.X;
-    srHitbox.Right = position.X + size.X - 1;
+void AbstractEntity::updateHitbox() {
+    hitbox.Top = position.Y;
+    hitbox.Bottom = position.Y + size.Y - 1;
+    hitbox.Left = position.X;
+    hitbox.Right = position.X + size.X - 1;
 }
 
 bool AbstractEntity::intersect(AbstractEntity &other) const {
-    SMALL_RECT a = this->getSrHitbox(), b = other.getSrHitbox();
+    SMALL_RECT a = this->getHitbox(), b = other.getHitbox();
     return (a.Left <= b.Right && a.Right >= b.Left && a.Top <= b.Bottom && a.Bottom >= b.Top);
 }
 
-const SMALL_RECT &AbstractEntity::getSrHitbox() const {
-    return srHitbox;
+const SMALL_RECT &AbstractEntity::getHitbox() const {
+    return hitbox;
 }
 
 const COORD &AbstractEntity::getOldPosition() const {
@@ -94,26 +68,25 @@ bool AbstractEntity::isExpired() const {
 }
 
 void AbstractEntity::checkExpired() {
-
-    if(! (srHitbox.Bottom >= gameArea.Top && srHitbox.Top <= gameArea.Bottom
-    && srHitbox.Left <= gameArea.Right && srHitbox.Right >= gameArea.Left)) {
+    if(! (hitbox.Bottom >= gameArea.Top && hitbox.Top <= gameArea.Bottom
+          && hitbox.Left <= gameArea.Right && hitbox.Right >= gameArea.Left)) {
         expired = true;
     }
 }
 
-void AbstractEntity::update() {
+/*void AbstractEntity::update() {
 
-}
+}*/
 
-void AbstractEntity::updateAll() {
-    for (std::map<int, AbstractEntity*>::value_type e : aliveMap) {
-        e.second->update();
+void AbstractEntity::updateAliveEntities(duration dt) {
+    for (std::map<int, AbstractEntity*>::value_type e : aliveEntities) {
+        e.second->update(dt);
     }
 }
 
 std::vector<AbstractEntity*> AbstractEntity::getExpiredEntities() {
     std::vector<AbstractEntity*> toReturn;
-    for (std::map<unsigned int, AbstractEntity*>::value_type e : aliveMap) {
+    for (std::map<unsigned int, AbstractEntity*>::value_type e : aliveEntities) {
         if(e.second->isExpired()) {
             toReturn.push_back(e.second);
         }
@@ -122,18 +95,18 @@ std::vector<AbstractEntity*> AbstractEntity::getExpiredEntities() {
 }
 
 
-void AbstractEntity::handleCollisionsWith(AbstractEntity& p) {
-    for (std::map<int, AbstractEntity*>::value_type e : aliveMap) {
-        if(e.second != &p && e.second->intersect(p)) {
-            e.second->collision(p);
-            p.collision(*e.second);
+void AbstractEntity::handleCollisionsWith(AbstractEntity& other) {
+    for (std::map<int, AbstractEntity*>::value_type e : aliveEntities) {
+        if(e.second != &other && e.second->intersect(other)) {
+            e.second->collisionWith(other);
+            other.collisionWith(*e.second);
         }
     }
 }
 
 void AbstractEntity::deleteEntities(std::vector<AbstractEntity *> toDelete) {
     for(AbstractEntity* e : toDelete) {
-        aliveMap.erase(e->getId());
+        aliveEntities.erase(e->getId());
         delete e;
     }
 }

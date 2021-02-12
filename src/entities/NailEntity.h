@@ -12,7 +12,9 @@ class NailEntity : public NpcEntity {
 public:
     NailEntity(const COORD &position, unsigned int id);
 
-    void collision(AbstractEntity &other) override;
+    void collisionWith(AbstractEntity &other) override;
+private:
+    static std::wstring art[];
 };
 
 

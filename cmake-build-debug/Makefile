@@ -143,6 +143,33 @@ UntitledCarGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/build
 .PHONY : UntitledCarGame/fast
 
+src/CollisionHandler.o: src/CollisionHandler.cpp.o
+
+.PHONY : src/CollisionHandler.o
+
+# target to build an object file
+src/CollisionHandler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/CollisionHandler.cpp.o
+.PHONY : src/CollisionHandler.cpp.o
+
+src/CollisionHandler.i: src/CollisionHandler.cpp.i
+
+.PHONY : src/CollisionHandler.i
+
+# target to preprocess a source file
+src/CollisionHandler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/CollisionHandler.cpp.i
+.PHONY : src/CollisionHandler.cpp.i
+
+src/CollisionHandler.s: src/CollisionHandler.cpp.s
+
+.PHONY : src/CollisionHandler.s
+
+# target to generate assembly for a file
+src/CollisionHandler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/CollisionHandler.cpp.s
+.PHONY : src/CollisionHandler.cpp.s
+
 src/Controls.o: src/Controls.cpp.o
 
 .PHONY : src/Controls.o
@@ -196,6 +223,60 @@ src/EntityManager.s: src/EntityManager.cpp.s
 src/EntityManager.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.s
 .PHONY : src/EntityManager.cpp.s
+
+src/Level.o: src/Level.cpp.o
+
+.PHONY : src/Level.o
+
+# target to build an object file
+src/Level.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o
+.PHONY : src/Level.cpp.o
+
+src/Level.i: src/Level.cpp.i
+
+.PHONY : src/Level.i
+
+# target to preprocess a source file
+src/Level.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Level.cpp.i
+.PHONY : src/Level.cpp.i
+
+src/Level.s: src/Level.cpp.s
+
+.PHONY : src/Level.s
+
+# target to generate assembly for a file
+src/Level.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Level.cpp.s
+.PHONY : src/Level.cpp.s
+
+src/LevelFactory.o: src/LevelFactory.cpp.o
+
+.PHONY : src/LevelFactory.o
+
+# target to build an object file
+src/LevelFactory.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o
+.PHONY : src/LevelFactory.cpp.o
+
+src/LevelFactory.i: src/LevelFactory.cpp.i
+
+.PHONY : src/LevelFactory.i
+
+# target to preprocess a source file
+src/LevelFactory.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.i
+.PHONY : src/LevelFactory.cpp.i
+
+src/LevelFactory.s: src/LevelFactory.cpp.s
+
+.PHONY : src/LevelFactory.s
+
+# target to generate assembly for a file
+src/LevelFactory.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.s
+.PHONY : src/LevelFactory.cpp.s
 
 src/Screen.o: src/Screen.cpp.o
 
@@ -557,12 +638,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... UntitledCarGame"
+	@echo "... src/CollisionHandler.o"
+	@echo "... src/CollisionHandler.i"
+	@echo "... src/CollisionHandler.s"
 	@echo "... src/Controls.o"
 	@echo "... src/Controls.i"
 	@echo "... src/Controls.s"
 	@echo "... src/EntityManager.o"
 	@echo "... src/EntityManager.i"
 	@echo "... src/EntityManager.s"
+	@echo "... src/Level.o"
+	@echo "... src/Level.i"
+	@echo "... src/Level.s"
+	@echo "... src/LevelFactory.o"
+	@echo "... src/LevelFactory.i"
+	@echo "... src/LevelFactory.s"
 	@echo "... src/Screen.o"
 	@echo "... src/Screen.i"
 	@echo "... src/Screen.s"

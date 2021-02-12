@@ -13,13 +13,6 @@
 #include "entities/TestEntity.h"
 #include "entities/PlayerEntity.h"
 
-enum entity_type {
-    player,
-    test,
-    points,
-    car
-};
-
 
 class EntityManager {
 private:

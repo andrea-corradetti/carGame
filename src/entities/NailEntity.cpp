@@ -7,8 +7,11 @@
 
 #define NAIL_SIZE {1, 1}
 
-void NailEntity::collision(AbstractEntity &other) {
+
+std::wstring NailEntity::art[] = {L"^"};
+
+void NailEntity::collisionWith(AbstractEntity &other) {
     expired = true;
 }
 
-NailEntity::NailEntity(const COORD &position, unsigned int id) : NpcEntity(position, NAIL_SIZE, id) {}
+NailEntity::NailEntity(const COORD &position, unsigned int id) : NpcEntity(position, NAIL_SIZE, id, duration()) {}

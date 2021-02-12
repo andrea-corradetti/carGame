@@ -6,12 +6,14 @@
 #define UNTITLEDCARGAME_CONTROLS_H
 
 #include <windows.h>
+#include "gameState.h"
 #include "entities/AbstractEntity.h"
 
 class Controls {
 public:
     Controls(HANDLE hStdin);
-    void handleInput(AbstractEntity &e);
+    void playerInput();
+    void handleInput(gameState currGameState);
 
 private:
     HANDLE hStdin;
@@ -21,6 +23,8 @@ private:
 
     void procKeyEvent(KEY_EVENT_RECORD er, AbstractEntity &e);
 
+    void introInput();
+    void menuInput();
 };
 
 
