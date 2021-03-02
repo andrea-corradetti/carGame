@@ -92,10 +92,10 @@
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Controls.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.cpp">
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/GameState.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.h">
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/GameState.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Level.cpp">
@@ -114,6 +114,12 @@
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/StatsBlock.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/StatsBlock.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.cpp">
@@ -156,9 +162,6 @@
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.h">
-			<Option target="UntitledCarGame"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/gameState.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h">

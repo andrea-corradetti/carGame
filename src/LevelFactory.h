@@ -14,12 +14,18 @@ public:
     LevelFactory();
     Level* previousLevel();
     Level* nextLevel();
+    void reset();
+    void updateLevel(int score);
+    Level* currentLevel;
 
+    unsigned int getCurrentLevelNo() const;
 private:
     Level* createLevel(unsigned int seed);
-    unsigned int currentLevelNo;
-    std::mt19937 randGen;
+    int currentLevelNo;
+    std::mt19937 randGen;   //pseudo random generator
+    std::random_device randDev;  //generates random numbers based on hardware state
     std::vector<Level*> generatedLevels;
+
 };
 
 

@@ -13,8 +13,8 @@ Controls::Controls(HANDLE hStdin) {
 }
 
 void Controls::playerInput() {
-    GetConsoleMode(hStdin, &fdwOldMode);
-    SetConsoleMode(hStdin, fdwOldMode | fdwMode);
+//    GetConsoleMode(hStdin, &fdwOldMode);
+//    SetConsoleMode(hStdin, fdwOldMode | fdwMode);
     GetNumberOfConsoleInputEvents(hStdin, &cNumToRead);
     auto player = AbstractEntity::aliveEntities.at(1);
     if (cNumToRead > 0) {
@@ -29,21 +29,28 @@ void Controls::playerInput() {
             }
         }
     }
-    SetConsoleMode(hStdin, fdwOldMode);
+//    SetConsoleMode(hStdin, fdwOldMode);
 }
 
 void Controls::introInput() {
+/*    GetConsoleMode(hStdin, &fdwOldMode);
+    SetConsoleMode(hStdin, fdwOldMode | fdwMode);*/
+    GetNumberOfConsoleInputEvents(hStdin, &cNumToRead);
     if (cNumToRead > 0) {
         ReadConsoleInput(hStdin, irInBuf, 128, &cNumRead);
-
         for (i = 0; i < cNumRead; i++) {
             switch (irInBuf[i].EventType) {
                 case KEY_EVENT:
-                    currGameState = gameState::running;
+                    if (irInBuf[i].Event.KeyEvent.wVirtualKeyCode == VK_ESCAPE) {
+                        gameState.changeStateTo(states::quit);
+                    } else {
+                        gameState.changeStateTo(states::running);
+                    }
                     break;
             }
         }
     }
+/*    SetConsoleMode(hStdin, fdwOldMode);*/
 }
 
 void Controls::procKeyEvent(KEY_EVENT_RECORD er, AbstractEntity &e) {
@@ -60,28 +67,29 @@ void Controls::procKeyEvent(KEY_EVENT_RECORD er, AbstractEntity &e) {
         case VK_DOWN:
             e.moveDown();
             break;
-        case VK_ESCAPE:
-            //todo add menu function
-            std::cout << "escape" << std::endl;
-            break;
 
     }
 }
 
-void Controls::handleInput(gameState currGameState) {
-    GetConsoleMode(hStdin, &fdwOldMode);
-    SetConsoleMode(hStdin, fdwOldMode | fdwMode);
+void Controls::deadInput() {
+   /* GetConsoleMode(hStdin, &fdwOldMode);
+    SetConsoleMode(hStdin, fdwOldMode | fdwMode);*/
     GetNumberOfConsoleInputEvents(hStdin, &cNumToRead);
-    switch (currGameState) {
-        case gameState::intro:
-            introInput();
-            break;
-        case gameState::menu:
-            //menuInput();
-            break;
-        case gameState::running:
-            playerInput();
-            break;
+    if (cNumToRead > 0) {
+        ReadConsoleInput(hStdin, irInBuf, 128, &cNumRead);
+        for (i = 0; i < cNumRead; i++) {
+            switch (irInBuf[i].EventType) {
+                case KEY_EVENT:
+                    if (irInBuf[i].Event.KeyEvent.wVirtualKeyCode == VK_ESCAPE) {
+                        gameState.changeStateTo(states::quit);
+                    } else {
+                        gameState.changeStateTo(states::reset);
+                    }
+                    break;
+                    //todo add input events here
+            }
+        }
     }
-    SetConsoleMode(hStdin, fdwOldMode);
+/*    SetConsoleMode(hStdin, fdwOldMode);*/
 }
+

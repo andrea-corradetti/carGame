@@ -8,8 +8,9 @@
 #include <cstdio>
 #include <iostream>
 #include <map>
-#include "gameState.h"
+#include "GameState.h"
 #include "entities/AbstractEntity.h"
+#include "StatsBlock.h"
 
 #define ESC "\x1b"
 #define CSI "\x1b["
@@ -20,13 +21,15 @@ public:
     Screen(HANDLE hStdin, HANDLE hStdout);
     void clear();
     void drawInterface();
-    void eraseEntities(std::vector<AbstractEntity *> toErase);
+    void eraseEntities(const std::vector<AbstractEntity *>& toErase);
     void drawAll(const std::map<unsigned int, AbstractEntity*>&);
     void refresh();
     const CONSOLE_SCREEN_BUFFER_INFO &getCsbiInfo() const;
-    void draw(gameState currGameState);
-
+    void drawIntro();
+    //void draw(gameState currGameState);
     void draw();
+    void drawDead(int score);
+    void drawStatSection(const StatsBlock &currentStats) ;
 
 private:
     HANDLE hStdout, hStdin;
@@ -35,7 +38,6 @@ private:
     COORD coBufferSize;
     void drawHorizontalLine(int size, bool isTop);
     void drawVerticalLine(int size);
-    void drawStatSection();
 
     void drawEntity(AbstractEntity &entity);
     void eraseEntity(AbstractEntity &entity);

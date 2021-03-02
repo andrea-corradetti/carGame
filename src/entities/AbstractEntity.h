@@ -39,16 +39,16 @@ public:
     static void handleCollisionsWith(AbstractEntity& other);
     static std::vector<AbstractEntity *> getExpiredEntities();
     static void deleteEntities(std::vector<AbstractEntity *> toDelete);
+    //static void deleteEntities(std::map<unsigned int, AbstractEntity*> toDelete);
 
     bool intersect(AbstractEntity &other) const;
-    virtual void checkExpired();
+    virtual bool checkExpired();
+
+
     /*getters and setters*/
-
-
     const COORD &getPosition() const;
     const COORD &getOldPosition() const;
     const COORD &getSize() const;
-    std::wstring *getPArt() const;
     virtual std::wstring *getArt() const = 0;
     const SMALL_RECT &getHitbox() const;
     unsigned int getId() const;
@@ -58,6 +58,9 @@ public:
     static std::vector<AbstractEntity*> expiredEntities;
     static std::map<unsigned int, AbstractEntity*> aliveEntities;
 
+    static void deleteExpiredEntities();
+    static void updateExpiredEntities();
+
 protected:
 
     void updateHitbox();
@@ -66,10 +69,10 @@ protected:
     bool expired;
     COORD size;
     COORD position, oldPosition;
-    std::wstring *pArt;
     SMALL_RECT hitbox;
 
 
+    void expire();
 };
 
 

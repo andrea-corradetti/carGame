@@ -9,7 +9,6 @@
 #include <random>
 #include "AbstractSpawner.h"
 #include "../entities/FuelEntity.h"
-#include "../EntityManager.h"
 
 class FuelSpawner: public AbstractSpawner {
 
@@ -21,13 +20,7 @@ public:
 protected:
     float computeSpawnRate() override;
 
-protected:
-
-
     FuelEntity *spawnAt(COORD position) override;
-
-    COORD computePosition() override;
-
     static const float baseRate;
 };
 

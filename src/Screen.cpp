@@ -56,7 +56,7 @@ void Screen::drawEntity(AbstractEntity &entity) {
     /*draw at the new position*/
     wprintf(CSI L"%d;%df", posY, posX);
     for (int y = 0; y < sizeY; y++) {
-        std::wstring sequence = entity.getPArt()[y];
+        std::wstring sequence = entity.getArt()[y];
         wprintf(L"%ls", sequence.c_str());
         wprintf(CSI L"%dB", 1);
         wprintf(CSI L"%dD", sizeX);
@@ -88,9 +88,6 @@ void Screen::drawInterface() {
     drawHorizontalLine(5, true);
     wprintf(CSI L"%d;%df", 4, 3);
     drawVerticalLine(5);
-
-
-
 }
 
 void Screen::drawHorizontalLine(int size, bool isTop) {
@@ -151,50 +148,51 @@ void Screen::eraseEntity(AbstractEntity &entity) {
     }
 }
 
-
-
-void Screen::eraseEntities(std::vector<AbstractEntity *> toErase) {
+void Screen::eraseEntities(const std::vector<AbstractEntity *>& toErase) {
     for (AbstractEntity* e : toErase) {
         eraseEntity(*e);
     }
 }
 
-void Screen::draw(gameState currGameState) {
-    switch (currGameState) {
-        case gameState::intro:
-            //drawIntro();
-            break;
-        case gameState::menu:
-            //drawMenu();
-            break;
-        case gameState::running:
-            drawAreaBorder(gameArea);
-            drawAreaBorder(statsArea);
-            eraseEntities(AbstractEntity::expiredEntities);
-            drawAll(AbstractEntity::aliveEntities);
-            break;
-
-    }
-    refresh();
-}
-
 void Screen::draw() {
     drawAreaBorder(gameArea);
     drawAreaBorder(statsArea);
-    eraseEntities(AbstractEntity::expiredEntities);
     drawAll(AbstractEntity::aliveEntities);
-    drawStatSection();
-
-    refresh();
+    eraseEntities(AbstractEntity::expiredEntities);
 }
 
-void Screen::drawStatSection() {
-    PlayerEntity* player = dynamic_cast<PlayerEntity *>(AbstractEntity::aliveEntities.at(1)); //todo consider changing player visibility
+void Screen::drawStatSection(const StatsBlock& currentStats) {
+    //PlayerEntity* player = dynamic_cast<PlayerEntity *>(AbstractEntity::aliveEntities.at(1)); //todo consider changing player visibility
     wprintf(CSI L"%d;%df", statsArea.Top + 1, statsArea.Left + 1); //set cursor for first line
-    wprintf(L"SCORE: %d", player->getScore());
+    wprintf(L"SCORE: %d", currentStats.getScore());
     wprintf(CSI L"%d;%df", statsArea.Top + 3, statsArea.Left + 1);
-    wprintf(L"HEALTH: %d", player->hp);
+    wprintf(L"HEALTH: %d", currentStats.getHp());
     wprintf(CSI L"%d;%df", statsArea.Top + 5, statsArea.Left + 1);
-    wprintf(L"FUEL: %d", player->fuel);
+    wprintf(L"FUEL: %d", currentStats.getFuel());
+    wprintf(CSI L"%d;%df", statsArea.Top + 7, statsArea.Left + 1);
+    wprintf(L"LEVEL: %d", currentStats.getLevel());
 }
 
+
+void Screen::drawIntro() {
+    short posY = 5;
+    short posX = 5;
+    wprintf(CSI L"%d;%df", posY, posX); //set cursor position
+    wprintf(L"PRESS A BUTTON TO START THE GAME");
+}
+
+
+
+void Screen::drawDead(int score) {
+    short posY = 5;
+    short posX = 5;
+    wprintf(CSI L"%d;%df", posY, posX); //set cursor position
+    wprintf(L"GAME OVER");
+    wprintf(CSI L"%d;%df", posY + 2, posX);
+    wprintf(L"Your score was: %d", score);
+    wprintf(CSI L"%d;%df", posY + 4, posX);
+    wprintf(L"Press ESC to quit");
+    wprintf(CSI L"%d;%df", posY + 6, posX);
+    wprintf(L"Press any button to try again");
+
+}

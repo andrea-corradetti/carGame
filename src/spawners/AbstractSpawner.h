@@ -6,8 +6,9 @@
 #define UNTITLEDCARGAME_ABSTRACTSPAWNER_H
 
 
-#include "../EntityManager.h"
 #include <random>
+#include <functional>
+#include "../entities/AbstractEntity.h"
 
 class AbstractSpawner {
 public:
@@ -16,11 +17,13 @@ public:
     virtual void updateRateMultiplier(unsigned int currentLevelNo) = 0;
     void setSeed(unsigned int seed);
 
+    void reset();
+
 protected:
     AbstractSpawner(entity_type type, unsigned int seed);
     virtual AbstractEntity* spawnAt(COORD position) = 0;
-    virtual COORD computePosition() = 0;
     virtual float computeSpawnRate() = 0;
+    virtual COORD computePosition();
     std::mt19937 randGen;
     const entity_type type;
     unsigned int seed;

@@ -12,13 +12,11 @@ AbstractEntity::AbstractEntity(const COORD &position, const COORD &size, unsigne
     updateHitbox();
     oldPosition = position;
     expired = false;
-    //coolDown = std::chrono::duration<int, std::milli>(500);
-    //start = std::chrono::steady_clock::now();
-    AbstractEntity::aliveEntities.insert(std::pair<const unsigned int, AbstractEntity*> (id, this));
+    aliveEntities.insert(std::pair<const unsigned int, AbstractEntity*> (id, this));
 }
 
 AbstractEntity::~AbstractEntity() {
-    AbstractEntity::aliveEntities.erase(this->getId());
+    aliveEntities.erase(this->getId());
 }
 
 
@@ -29,11 +27,6 @@ const COORD &AbstractEntity::getPosition() const {
 const COORD &AbstractEntity::getSize() const {
     return size;
 }
-
-std::wstring *AbstractEntity::getPArt() const {
-    return pArt;
-}
-
 
 void AbstractEntity::updateHitbox() {
     hitbox.Top = position.Y;
@@ -67,10 +60,16 @@ bool AbstractEntity::isExpired() const {
     return expired;
 }
 
-void AbstractEntity::checkExpired() {
-    if(! (hitbox.Bottom >= gameArea.Top && hitbox.Top <= gameArea.Bottom
+bool AbstractEntity::checkExpired() {
+    if (expired){       //entity is already expired, no need to check
+        return true;
+    } else if (gameState.getCurrent() != states::running) {
+        return true;
+    } else if(! (hitbox.Bottom >= gameArea.Top && hitbox.Top <= gameArea.Bottom
           && hitbox.Left <= gameArea.Right && hitbox.Right >= gameArea.Left)) {
-        expired = true;
+        return true;
+    } else {
+        return false;
     }
 }
 
@@ -87,7 +86,8 @@ void AbstractEntity::updateAliveEntities(duration dt) {
 std::vector<AbstractEntity*> AbstractEntity::getExpiredEntities() {
     std::vector<AbstractEntity*> toReturn;
     for (std::map<unsigned int, AbstractEntity*>::value_type e : aliveEntities) {
-        if(e.second->isExpired()) {
+        //e.second->expired = e.second->checkExpired();
+        if(e.second->checkExpired()) {
             toReturn.push_back(e.second);
         }
     }
@@ -112,6 +112,18 @@ void AbstractEntity::deleteEntities(std::vector<AbstractEntity *> toDelete) {
 }
 
 
+void AbstractEntity::deleteExpiredEntities() {
+    deleteEntities(expiredEntities);
+    expiredEntities.clear();
+}
 
+void AbstractEntity::updateExpiredEntities() {
+    expiredEntities = getExpiredEntities();
+}
+
+void AbstractEntity::expire() {
+    aliveEntities.erase(this->getId());
+    expiredEntities.push_back(this);
+}
 
 

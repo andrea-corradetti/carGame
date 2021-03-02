@@ -11,9 +11,9 @@
 std::wstring CarEntity::art[] = {L"00", L"II", L"00"};
 
 CarEntity::CarEntity(const COORD &position, unsigned int id)
-:NpcEntity(position, CAR_SIZE, id, duration(1)) {
-    pArt = art;
-    value = -20;
+: NpcEntity(position, id, CAR_SIZE, duration(1)) {
+    hp = 2;
+    value = -25;
 }
 
 
@@ -30,6 +30,10 @@ void CarEntity::act() {
 
 void CarEntity::collisionWith(AbstractEntity &other) {
     if (auto player = dynamic_cast<PlayerEntity*>(&other)) {
+        if (--hp <= 0) {
+            expired = true;
+        }
+
         if (hitbox.Bottom <= other.getHitbox().Top) {
             moveUp();
 

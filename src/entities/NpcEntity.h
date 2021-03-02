@@ -17,7 +17,7 @@
 
 class NpcEntity : public AbstractEntity{
 public:
-    NpcEntity(const COORD &position, const COORD &size, unsigned int id, duration coolDown);
+    NpcEntity(const COORD &position, unsigned int id, const COORD &size, duration coolDown);
     void update(duration dt) override;
     virtual void act();
 

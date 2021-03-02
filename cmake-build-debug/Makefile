@@ -197,32 +197,32 @@ src/Controls.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.s
 .PHONY : src/Controls.cpp.s
 
-src/EntityManager.o: src/EntityManager.cpp.o
+src/GameState.o: src/GameState.cpp.o
 
-.PHONY : src/EntityManager.o
+.PHONY : src/GameState.o
 
 # target to build an object file
-src/EntityManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o
-.PHONY : src/EntityManager.cpp.o
+src/GameState.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/GameState.cpp.o
+.PHONY : src/GameState.cpp.o
 
-src/EntityManager.i: src/EntityManager.cpp.i
+src/GameState.i: src/GameState.cpp.i
 
-.PHONY : src/EntityManager.i
+.PHONY : src/GameState.i
 
 # target to preprocess a source file
-src/EntityManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.i
-.PHONY : src/EntityManager.cpp.i
+src/GameState.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/GameState.cpp.i
+.PHONY : src/GameState.cpp.i
 
-src/EntityManager.s: src/EntityManager.cpp.s
+src/GameState.s: src/GameState.cpp.s
 
-.PHONY : src/EntityManager.s
+.PHONY : src/GameState.s
 
 # target to generate assembly for a file
-src/EntityManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.s
-.PHONY : src/EntityManager.cpp.s
+src/GameState.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/GameState.cpp.s
+.PHONY : src/GameState.cpp.s
 
 src/Level.o: src/Level.cpp.o
 
@@ -304,6 +304,33 @@ src/Screen.s: src/Screen.cpp.s
 src/Screen.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.s
 .PHONY : src/Screen.cpp.s
+
+src/StatsBlock.o: src/StatsBlock.cpp.o
+
+.PHONY : src/StatsBlock.o
+
+# target to build an object file
+src/StatsBlock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/StatsBlock.cpp.o
+.PHONY : src/StatsBlock.cpp.o
+
+src/StatsBlock.i: src/StatsBlock.cpp.i
+
+.PHONY : src/StatsBlock.i
+
+# target to preprocess a source file
+src/StatsBlock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/StatsBlock.cpp.i
+.PHONY : src/StatsBlock.cpp.i
+
+src/StatsBlock.s: src/StatsBlock.cpp.s
+
+.PHONY : src/StatsBlock.s
+
+# target to generate assembly for a file
+src/StatsBlock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/StatsBlock.cpp.s
+.PHONY : src/StatsBlock.cpp.s
 
 src/entities/AbstractEntity.o: src/entities/AbstractEntity.cpp.o
 
@@ -644,9 +671,9 @@ help:
 	@echo "... src/Controls.o"
 	@echo "... src/Controls.i"
 	@echo "... src/Controls.s"
-	@echo "... src/EntityManager.o"
-	@echo "... src/EntityManager.i"
-	@echo "... src/EntityManager.s"
+	@echo "... src/GameState.o"
+	@echo "... src/GameState.i"
+	@echo "... src/GameState.s"
 	@echo "... src/Level.o"
 	@echo "... src/Level.i"
 	@echo "... src/Level.s"
@@ -656,6 +683,9 @@ help:
 	@echo "... src/Screen.o"
 	@echo "... src/Screen.i"
 	@echo "... src/Screen.s"
+	@echo "... src/StatsBlock.o"
+	@echo "... src/StatsBlock.i"
+	@echo "... src/StatsBlock.s"
 	@echo "... src/entities/AbstractEntity.o"
 	@echo "... src/entities/AbstractEntity.i"
 	@echo "... src/entities/AbstractEntity.s"

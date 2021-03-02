@@ -12,6 +12,7 @@ class FuelEntity : public NpcEntity {
 
 public:
     FuelEntity(const COORD &position, unsigned int id);
+    std::wstring *getArt() const override;
 
 private:
     void collisionWith(AbstractEntity &other) override;

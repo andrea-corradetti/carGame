@@ -24,16 +24,15 @@ COORD CarSpawner::computePosition() {
 }
 
 void CarSpawner::updateRateMultiplier(unsigned int currentLevelNo) {
-//    if (currentLevelNo <= 3) {
-//        rateMultiplier = 0.1;
-//    } else if (currentLevelNo <= 5) {
-//        rateMultiplier = 0.5;
-//    } else if (currentLevelNo <= 10) {
-//        rateMultiplier = 1;
-//    } else {
-//        rateMultiplier = 1.3;
-//    }
-    rateMultiplier = 1;
+    if (currentLevelNo <= 3) {
+        rateMultiplier = 0.5;
+    } else if (currentLevelNo <= 5) {
+        rateMultiplier = 0.8;
+    } else if (currentLevelNo <= 10) {
+        rateMultiplier = 1;
+    } else {
+        rateMultiplier = 1.5;
+    }
 }
 
 float CarSpawner::computeSpawnRate() {

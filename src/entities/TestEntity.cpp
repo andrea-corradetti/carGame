@@ -7,8 +7,8 @@
 
 
 TestEntity::TestEntity(const COORD &position, unsigned int id)
-: NpcEntity(position, {1, 1}, id, duration()) {
-    pArt = &art;
+: NpcEntity(position, id, {1, 1}, duration(1)) {
+    //pArt = &art;
     value = 10;
     coolDown = std::chrono::duration<int, std::milli>(500);
 }

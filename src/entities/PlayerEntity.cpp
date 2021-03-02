@@ -7,21 +7,29 @@
 #include "FuelEntity.h"
 #include "NailEntity.h"
 #include "NpcEntity.h"
+#include "../globals.h"
 
-#define PLAYER_SIZE {2, 3}
+const COORD spawnPosition {5, 10};
+const COORD playerSize {2, 3};
+const int playerId = 1;
 
 std::wstring PlayerEntity::art[] = {L"aa", L"bb", L"cc"};
 
-PlayerEntity::PlayerEntity(const COORD &position, unsigned int id)
-    : AbstractEntity(position, PLAYER_SIZE, id) {
-    score = 0;
-    pArt = art;
-    fuel = 100;
-    hp = 5;
+PlayerEntity::PlayerEntity(const COORD &position)
+    : AbstractEntity(position, playerSize, playerId), score(0), fuel(100), hp(1) {}
 
+PlayerEntity *PlayerEntity::spawn() {
+    auto iter = aliveEntities.find(playerId);
+    if(iter == aliveEntities.end()) {
+        return new PlayerEntity(spawnPosition);
+    }
+    else {
+        PlayerEntity *p = dynamic_cast<PlayerEntity *>(iter->second);
+        return p;
+    }
 }
 
-//FIXME strange collision teleportation
+
 void PlayerEntity::collisionWith(AbstractEntity &other) {
     // dynamic_cast to a pointer type returns NULL if the cast fails
     // (dynamic_cast to a reference type would throw an exception on failure)
@@ -49,8 +57,16 @@ void PlayerEntity::collisionWith(AbstractEntity &other) {
         this->hp -= 1;
 
     } else {
-
+        //todo add default collision
     }
+
+    if (hp <= 0) {
+        die();
+    }
+}
+
+std::wstring *PlayerEntity::getArt() const {
+    return art;
 }
 
 void PlayerEntity::update(duration dt) {
@@ -88,4 +104,17 @@ void PlayerEntity::moveDown() {
 
 int PlayerEntity::getScore() const {
     return score;
+}
+
+void PlayerEntity::die() {
+    expired = true;
+    gameState.changeStateTo(states::dead);
+}
+
+unsigned int PlayerEntity::getHp() const {
+    return hp;
+}
+
+unsigned int PlayerEntity::getFuel() const {
+    return fuel;
 }

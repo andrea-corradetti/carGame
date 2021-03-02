@@ -4,12 +4,13 @@
 #include "entities/AbstractEntity.h"
 #include "Screen.h"
 #include "Controls.h"
-#include "EntityManager.h"
 #include "globals.h"
 #include "Level.h"
 #include "LevelFactory.h"
+#include "StatsBlock.h"
+#include "entities/PlayerEntity.h"
 
-
+//todo refactor global variables
 SMALL_RECT gameArea = {
         3,
         3,
@@ -25,24 +26,21 @@ SMALL_RECT statsArea = {
 };
 
 
-unsigned int levelNo = 1;
-gameState currGameState = gameState::running;
+GameState gameState;
 
 
 int main() {
+    /*Setup*/
     bool quit = false;
     Screen s(GetStdHandle(STD_INPUT_HANDLE), GetStdHandle(STD_OUTPUT_HANDLE));
     Controls c(GetStdHandle(STD_INPUT_HANDLE));
-    EntityManager em;
     LevelFactory lf;
-    Level* currentLevel = lf.nextLevel();
+    StatsBlock currentStats;
 
-    AbstractEntity *p = em.spawnEntity(player, {3, 10});
-/*    em.spawnEntity(test, {7, gameArea.Top});
-    em.spawnEntity(test, {9, gameArea.Top});
-    em.spawnEntity(car, {8, gameArea.Top});*/
+    lf.nextLevel();
+    auto *player = PlayerEntity::spawn();
 
-    duration totalTime(0);
+    duration totalTime(0);                  //todo group functionalities in an object
     const auto dt = duration(1. / 60);
     auto start = std::chrono::steady_clock::now();
     duration accumulator(0);
@@ -52,18 +50,68 @@ int main() {
         duration frameTime = end - start;
         accumulator += frameTime;
         start = end;
-
+        /*Game Logic*/
         while (accumulator >= dt) {
-            currentLevel->runSpawners(dt);
-            AbstractEntity::expiredEntities = AbstractEntity::getExpiredEntities();
-            AbstractEntity::deleteEntities(AbstractEntity::expiredEntities);
-            c.playerInput();
-            AbstractEntity::updateAliveEntities(dt);        //TODO use dt
-            AbstractEntity::handleCollisionsWith(*p);
+            switch (gameState.getCurrent()) {
+                case states::running:
+                    AbstractEntity::deleteExpiredEntities();    //FIXME expired entities not fetched at the right time. Cars are not erased
+                    lf.currentLevel->runSpawners(dt);
+                    c.playerInput();
+                    AbstractEntity::updateAliveEntities(dt);
+                    AbstractEntity::handleCollisionsWith(*player);
+                    AbstractEntity::updateExpiredEntities();    //todo add expire() method to automate removal from aliveEntity
+                    currentStats.setScore(player->getScore())
+                        ->setLevel(lf.getCurrentLevelNo())
+                        ->setHp(player->getHp())
+                        ->setFuel(player->getFuel());
+                    lf.updateLevel(currentStats.getScore());
+                    break;
+                case states::menu:
+                    //todo add menu input
+                case states::intro:
+                    c.introInput();
+                    break;
+                case states::dead:
+                    c.deadInput();
+                    break;
+
+                case states::quit:
+                    quit = true;
+                    break;
+
+                case states::reset:
+                    AbstractEntity::updateExpiredEntities();
+                    AbstractEntity::deleteExpiredEntities();
+                    lf.reset();
+                    lf.nextLevel();
+                    player = PlayerEntity::spawn();
+                    gameState.changeStateTo(states::running);
+                    break;
+            }
+
             accumulator -= dt;
             totalTime += dt;
         }
-        s.draw();
+
+
+        /*Draw the screen*/
+        if (gameState.isChanged()) {
+            s.clear();
+            gameState.setChanged(false);
+        }
+        switch (gameState.getCurrent()) {
+            case states::running:
+                s.draw();
+                s.drawStatSection(currentStats);
+                break;
+            case states::intro:
+                s.drawIntro();
+                break;
+            case states::dead:
+                s.drawDead(currentStats.getScore());
+                break;
+        }
+        s.refresh();
     }
 
 }

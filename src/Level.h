@@ -14,7 +14,7 @@ public:
     Level(unsigned int seed, unsigned int levelNo);
     const int levelNo;
     void runSpawners(duration dt);
-
+    void resetSpawners();
 private:
     void updateSpawnRates();
 

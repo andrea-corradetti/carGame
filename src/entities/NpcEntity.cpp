@@ -4,9 +4,9 @@
 
 #include "NpcEntity.h"
 
-NpcEntity::NpcEntity(const COORD &position, const COORD &size, unsigned int id, duration coolDown)
-    : AbstractEntity(position, size, id) {
-    //start = std::chrono::steady_clock::now();
+NpcEntity::NpcEntity(const COORD &position, unsigned int id, const COORD &size, duration coolDown)
+    : AbstractEntity(position, size, id), coolDown(coolDown) {
+    timeElapsed = duration(0);
 }
 
 void NpcEntity::update(duration dt) {
@@ -19,7 +19,7 @@ void NpcEntity::update(duration dt) {
         //start = end;
         timeElapsed -= coolDown;
     }
-    checkExpired();
+    expired = checkExpired();
 }
 
 void NpcEntity::act() {

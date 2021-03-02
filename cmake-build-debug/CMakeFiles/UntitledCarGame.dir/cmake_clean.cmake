@@ -1,10 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/UntitledCarGame.dir/src/CollisionHandler.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o"
-  "CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o"
+  "CMakeFiles/UntitledCarGame.dir/src/GameState.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o"
+  "CMakeFiles/UntitledCarGame.dir/src/StatsBlock.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.o"

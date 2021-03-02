@@ -28,8 +28,10 @@ void FuelEntity::collisionWith(AbstractEntity &other) {
 
 
 FuelEntity::FuelEntity(const COORD &position, unsigned int id)
-    : NpcEntity(position, FUEL_SIZE, id, duration()) {
-    pArt = art;
-    coolDown = duration(.3);
-    value = 25;
+    : NpcEntity(position, id, FUEL_SIZE, duration(1)) {
+    value = 50;
+}
+
+std::wstring *FuelEntity::getArt() const {
+    return art;
 }

@@ -6,10 +6,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/CollisionHandler.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/CollisionHandler.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Controls.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o"
-  "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/EntityManager.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/EntityManager.cpp.o"
+  "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/GameState.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/GameState.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Level.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/LevelFactory.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/Screen.cpp.o"
+  "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/StatsBlock.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/StatsBlock.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/AbstractEntity.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/CarEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/CarEntity.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/FuelEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/FuelEntity.cpp.o"

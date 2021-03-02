@@ -14,4 +14,9 @@ void NailEntity::collisionWith(AbstractEntity &other) {
     expired = true;
 }
 
-NailEntity::NailEntity(const COORD &position, unsigned int id) : NpcEntity(position, NAIL_SIZE, id, duration()) {}
+NailEntity::NailEntity(const COORD &position, unsigned int id)
+: NpcEntity(position, id, NAIL_SIZE, duration(1)) {}
+
+std::wstring *NailEntity::getArt() const {
+    return art;
+}

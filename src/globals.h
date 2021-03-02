@@ -5,11 +5,18 @@
 #ifndef UNTITLEDCARGAME_GLOBALS_H
 #define UNTITLEDCARGAME_GLOBALS_H
 
+#include <chrono>
+#include <windows.h>
+#include "GameState.h"
+
 typedef std::chrono::duration<double> duration;
 
 extern SMALL_RECT gameArea;
 extern SMALL_RECT statsArea;
 extern unsigned int levelNo;
+
+extern GameState gameState ;
+
 
 
 

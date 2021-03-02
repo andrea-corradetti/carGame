@@ -13,6 +13,9 @@ public:
     NailEntity(const COORD &position, unsigned int id);
 
     void collisionWith(AbstractEntity &other) override;
+
+    std::wstring *getArt() const override;
+
 private:
     static std::wstring art[];
 };
