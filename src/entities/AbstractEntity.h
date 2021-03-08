@@ -19,7 +19,8 @@ enum entity_type {
     test,
     fuel,
     car,
-    nail
+    nail,
+    points
 };
 
 class AbstractEntity {
@@ -35,11 +36,10 @@ public:
     virtual void moveUp() = 0;
     virtual void moveDown() = 0;
 
+    static void deleteExpiredEntities();
+    static void updateExpiredEntities();
     static void updateAliveEntities(duration dt);
     static void handleCollisionsWith(AbstractEntity& other);
-    static std::vector<AbstractEntity *> getExpiredEntities();
-    static void deleteEntities(std::vector<AbstractEntity *> toDelete);
-    //static void deleteEntities(std::map<unsigned int, AbstractEntity*> toDelete);
 
     bool intersect(AbstractEntity &other) const;
     virtual bool checkExpired();
@@ -53,16 +53,14 @@ public:
     const SMALL_RECT &getHitbox() const;
     unsigned int getId() const;
     bool isExpired() const;
-    void setOldPosition(const COORD &oldPosition);
+
 
     static std::vector<AbstractEntity*> expiredEntities;
     static std::map<unsigned int, AbstractEntity*> aliveEntities;
 
-    static void deleteExpiredEntities();
-    static void updateExpiredEntities();
+
 
 protected:
-
     void updateHitbox();
 
     unsigned int id;
@@ -70,9 +68,12 @@ protected:
     COORD size;
     COORD position, oldPosition;
     SMALL_RECT hitbox;
+    duration timeElapsed;
 
+private:
+    static void deleteEntities(std::vector<AbstractEntity *> toDelete);
+    static std::vector<AbstractEntity *> getExpiredEntities();
 
-    void expire();
 };
 
 

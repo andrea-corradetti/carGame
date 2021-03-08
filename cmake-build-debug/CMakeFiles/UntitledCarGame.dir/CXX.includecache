@@ -6,11 +6,51 @@
 
 #IncludeRegexTransform: 
 
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Controls.cpp
+iostream
+-
+windows.h
+-
+Controls.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Controls.h
+entities/PlayerEntity.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.h
+
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Controls.h
+windows.h
+-
+GameState.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/GameState.h
+entities/AbstractEntity.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.h
+
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/GameState.h
 
-/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.cpp
-AbstractEntity.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.cpp
+list
+-
+vector
+-
+Screen.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.h
+entities/PlayerEntity.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.h
+
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Screen.h
+cstdio
+-
+iostream
+-
+map
+-
+GameState.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/GameState.h
+entities/AbstractEntity.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.h
+StatsBlock.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/StatsBlock.h
+
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/StatsBlock.h
 
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.h
 chrono
@@ -23,6 +63,14 @@ map
 -
 vector
 -
+../globals.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
+
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.h
+AbstractEntity.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/AbstractEntity.h
+../GameState.h
+/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/GameState.h
 ../globals.h
 /cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h
 

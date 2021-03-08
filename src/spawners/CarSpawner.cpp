@@ -4,11 +4,12 @@
 
 #include "CarSpawner.h"
 
-const float CarSpawner::baseRate = 0.2;
 
-CarSpawner::CarSpawner(unsigned int seed) :  AbstractSpawner(car, seed) {
+
+CarSpawner::CarSpawner(unsigned int seed, float baseRate) : AbstractSpawner(car, seed, baseRate) {
     coolDown = duration(5);
 }
+
 
 CarEntity* CarSpawner::spawnAt(COORD position) {
     return new CarEntity(position, nextId++);
@@ -24,18 +25,14 @@ COORD CarSpawner::computePosition() {
 }
 
 void CarSpawner::updateRateMultiplier(unsigned int currentLevelNo) {
-    if (currentLevelNo <= 3) {
+    if (currentLevelNo <= 5) {
         rateMultiplier = 0.5;
-    } else if (currentLevelNo <= 5) {
-        rateMultiplier = 0.8;
     } else if (currentLevelNo <= 10) {
+        rateMultiplier = 0.8;
+    } else if (currentLevelNo <= 15) {
         rateMultiplier = 1;
     } else {
-        rateMultiplier = 1.5;
+        rateMultiplier = 1;
     }
-}
-
-float CarSpawner::computeSpawnRate() {
-    return baseRate * rateMultiplier;
 }
 

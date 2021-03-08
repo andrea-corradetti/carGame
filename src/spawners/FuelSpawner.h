@@ -13,12 +13,11 @@
 class FuelSpawner: public AbstractSpawner {
 
 public:
-    FuelSpawner(unsigned int seed);
+    FuelSpawner(unsigned int seed, float baseRate = 0.7);
 
     void updateRateMultiplier(unsigned int currentLevelNo) override;
 
 protected:
-    float computeSpawnRate() override;
 
     FuelEntity *spawnAt(COORD position) override;
     static const float baseRate;

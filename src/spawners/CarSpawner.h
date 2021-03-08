@@ -13,21 +13,15 @@
 
 class CarSpawner : public AbstractSpawner{
 public:
-    CarSpawner(unsigned int seed);
-
-protected:
-    static const float baseRate;
+    CarSpawner(unsigned int seed, float baseRate = 0.5);
 
 private:
     CarEntity* spawnAt(COORD position) override;
     COORD computePosition() override;
 
 protected:
-    //float updateSpawnRate(unsigned int currentLevel) override;
 
     void updateRateMultiplier(unsigned int currentLevelNo) override;
-
-    float computeSpawnRate() override;
 
 
 };

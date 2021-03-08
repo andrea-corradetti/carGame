@@ -9,6 +9,7 @@
 #include <random>
 #include <functional>
 #include "../entities/AbstractEntity.h"
+#include "../entities/CarEntity.h"
 
 class AbstractSpawner {
 public:
@@ -20,10 +21,11 @@ public:
     void reset();
 
 protected:
-    AbstractSpawner(entity_type type, unsigned int seed);
+    AbstractSpawner(entity_type type, unsigned int seed, float baseRate);
     virtual AbstractEntity* spawnAt(COORD position) = 0;
-    virtual float computeSpawnRate() = 0;
+    virtual float computeSpawnRate();
     virtual COORD computePosition();
+
     std::mt19937 randGen;
     const entity_type type;
     unsigned int seed;
@@ -32,6 +34,10 @@ protected:
     duration coolDown;
     float rateMultiplier;
     float spawnRate;
+
+    const float baseRate;
+
+
 
 private:
     static std::map<entity_type, std::function<AbstractSpawner *(unsigned int)>> spawnerTypeDict;

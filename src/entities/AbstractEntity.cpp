@@ -8,10 +8,8 @@ std::map<unsigned int, AbstractEntity*> AbstractEntity::aliveEntities;
 std::vector<AbstractEntity*> AbstractEntity::expiredEntities;
 
 AbstractEntity::AbstractEntity(const COORD &position, const COORD &size, unsigned const int id)
-    : position(position), size(size), id(id) {
+    : position(position), size(size), id(id), timeElapsed(duration(0)), oldPosition(position), expired(false) {
     updateHitbox();
-    oldPosition = position;
-    expired = false;
     aliveEntities.insert(std::pair<const unsigned int, AbstractEntity*> (id, this));
 }
 
@@ -48,9 +46,9 @@ const COORD &AbstractEntity::getOldPosition() const {
     return oldPosition;
 }
 
-void AbstractEntity::setOldPosition(const COORD &oldPosition) {
+/*void AbstractEntity::setOldPosition(const COORD &oldPosition) {
     this->oldPosition = oldPosition;
-}
+}*/
 
 unsigned int AbstractEntity::getId() const {
     return id;
@@ -119,11 +117,6 @@ void AbstractEntity::deleteExpiredEntities() {
 
 void AbstractEntity::updateExpiredEntities() {
     expiredEntities = getExpiredEntities();
-}
-
-void AbstractEntity::expire() {
-    aliveEntities.erase(this->getId());
-    expiredEntities.push_back(this);
 }
 
 

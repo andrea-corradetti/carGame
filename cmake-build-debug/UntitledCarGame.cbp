@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Clock.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Clock.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/CollisionHandler.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
@@ -158,6 +164,12 @@
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PointsEntity.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PointsEntity.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
@@ -192,6 +204,12 @@
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/NailSpawner.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/PointsSpawner.cpp">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/PointsSpawner.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/CMakeLists.txt">

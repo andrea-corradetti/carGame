@@ -5,30 +5,27 @@
 #include "NailSpawner.h"
 #include "../entities/NailEntity.h"
 
-const float NailSpawner::baseRate = 1;
+NailSpawner::NailSpawner(unsigned int seed, float baseRate) : AbstractSpawner(nail, seed, baseRate) {
+    coolDown = duration(3);
+}
+
 
 void NailSpawner::updateRateMultiplier(unsigned int currentLevelNo) {
-    if (currentLevelNo <= 3) {
-        rateMultiplier = 0.1;
-    } else if (currentLevelNo <= 5) {
-        rateMultiplier = 0.5;
+    if (currentLevelNo <= 5) {
+        rateMultiplier = 0.4;
     } else if (currentLevelNo <= 10) {
-        rateMultiplier = 1;
+        rateMultiplier = 0.5;
+    } else if (currentLevelNo <= 15) {
+        rateMultiplier = 0.8;
     } else {
-        rateMultiplier = 1.3;
+        rateMultiplier = 1;
     }
 }
 
-float NailSpawner::computeSpawnRate() {
-    return baseRate * rateMultiplier;
-}
 
 NailEntity *NailSpawner::spawnAt(COORD position) {
     return new NailEntity(position, nextId++);
 }
 
 
-NailSpawner::NailSpawner(unsigned int seed) : AbstractSpawner(nail, seed){
-    coolDown = duration(1);
-}
 

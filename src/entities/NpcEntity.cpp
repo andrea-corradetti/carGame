@@ -3,20 +3,16 @@
 //
 
 #include "NpcEntity.h"
+#include "AbstractEntity.h"
 
 NpcEntity::NpcEntity(const COORD &position, unsigned int id, const COORD &size, duration coolDown)
-    : AbstractEntity(position, size, id), coolDown(coolDown) {
-    timeElapsed = duration(0);
-}
+    : AbstractEntity(position, size, id), coolDown(coolDown) {}
 
 void NpcEntity::update(duration dt) {
-//    using std::chrono::steady_clock, std::chrono::duration_cast, std::chrono::duration;
-//    auto end = steady_clock::now();
-//    auto timeDiff = duration_cast<duration<int, std::milli>>(end - start);
+    oldPosition = position;
     timeElapsed += dt;
     while (timeElapsed >= coolDown){
         act();
-        //start = end;
         timeElapsed -= coolDown;
     }
     expired = checkExpired();

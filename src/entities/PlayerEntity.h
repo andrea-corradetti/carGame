@@ -15,8 +15,8 @@ public:
     PlayerEntity(const COORD &position);
     void collisionWith(AbstractEntity &other) override;
     void update(duration dt) override;
-    unsigned int hp;
-    unsigned int fuel;  //todo consider making private
+    int hp;
+    double fuel;  //todo consider making private
     static std::wstring art[];
 
     void moveLeft() override;
@@ -30,18 +30,20 @@ public:
     void die();
 
 public:
-    unsigned int getHp() const;
+    int getHp() const;
 
-    unsigned int getFuel() const;
+    double getFuel() const;
 
     int getScore() const;
 
     std::wstring *getArt() const override;
 
     static PlayerEntity *spawn();
+    bool checkExpired() override;
 
 private:
     int score;
+
 };
 
 

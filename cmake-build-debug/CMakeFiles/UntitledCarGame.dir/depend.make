@@ -21,6 +21,9 @@ CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o: ../src/GameState.h
 CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o: ../src/Level.cpp
 CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o: ../src/Level.h
 CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o: ../src/entities/AbstractEntity.h
+CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o: ../src/entities/CarEntity.h
+CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o: ../src/entities/NpcEntity.h
+CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o: ../src/entities/PlayerEntity.h
 CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o: ../src/globals.h
 CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o: ../src/spawners/AbstractSpawner.h
 
@@ -29,6 +32,9 @@ CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o: ../src/Level.h
 CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o: ../src/LevelFactory.cpp
 CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o: ../src/LevelFactory.h
 CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o: ../src/entities/AbstractEntity.h
+CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o: ../src/entities/CarEntity.h
+CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o: ../src/entities/NpcEntity.h
+CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o: ../src/entities/PlayerEntity.h
 CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o: ../src/globals.h
 CMakeFiles/UntitledCarGame.dir/src/LevelFactory.cpp.o: ../src/spawners/AbstractSpawner.h
 
@@ -89,7 +95,16 @@ CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o: ../src/entities/
 CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o: ../src/entities/NpcEntity.h
 CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o: ../src/entities/PlayerEntity.cpp
 CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o: ../src/entities/PlayerEntity.h
+CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o: ../src/entities/PointsEntity.h
 CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o: ../src/globals.h
+
+CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.o: ../src/GameState.h
+CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.o: ../src/entities/AbstractEntity.h
+CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.o: ../src/entities/NpcEntity.h
+CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.o: ../src/entities/PlayerEntity.h
+CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.o: ../src/entities/PointsEntity.cpp
+CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.o: ../src/entities/PointsEntity.h
+CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.o: ../src/globals.h
 
 CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.o: ../src/GameState.h
 CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.o: ../src/entities/AbstractEntity.h
@@ -106,6 +121,8 @@ CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/LevelFactory.h
 CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/Screen.h
 CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/StatsBlock.h
 CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/entities/AbstractEntity.h
+CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/entities/CarEntity.h
+CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/entities/NpcEntity.h
 CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/entities/PlayerEntity.h
 CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/globals.h
 CMakeFiles/UntitledCarGame.dir/src/main.cpp.o: ../src/main.cpp
@@ -118,12 +135,14 @@ CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/entiti
 CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/entities/NailEntity.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/entities/NpcEntity.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/entities/PlayerEntity.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/entities/PointsEntity.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/globals.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/spawners/AbstractSpawner.cpp
 CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/spawners/AbstractSpawner.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/spawners/CarSpawner.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/spawners/FuelSpawner.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/spawners/NailSpawner.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o: ../src/spawners/PointsSpawner.h
 
 CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o: ../src/GameState.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o: ../src/entities/AbstractEntity.h
@@ -137,6 +156,7 @@ CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o: ../src/spawners/Ca
 
 CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o: ../src/GameState.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o: ../src/entities/AbstractEntity.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o: ../src/entities/CarEntity.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o: ../src/entities/FuelEntity.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o: ../src/entities/NpcEntity.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o: ../src/entities/PlayerEntity.h
@@ -147,6 +167,7 @@ CMakeFiles/UntitledCarGame.dir/src/spawners/FuelSpawner.cpp.o: ../src/spawners/F
 
 CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: ../src/GameState.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: ../src/entities/AbstractEntity.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: ../src/entities/CarEntity.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: ../src/entities/NailEntity.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: ../src/entities/NpcEntity.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: ../src/entities/PlayerEntity.h
@@ -154,4 +175,15 @@ CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: ../src/globals.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: ../src/spawners/AbstractSpawner.h
 CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: ../src/spawners/NailSpawner.cpp
 CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.o: ../src/spawners/NailSpawner.h
+
+CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.o: ../src/GameState.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.o: ../src/entities/AbstractEntity.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.o: ../src/entities/CarEntity.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.o: ../src/entities/NpcEntity.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.o: ../src/entities/PlayerEntity.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.o: ../src/entities/PointsEntity.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.o: ../src/globals.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.o: ../src/spawners/AbstractSpawner.h
+CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.o: ../src/spawners/PointsSpawner.cpp
+CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.o: ../src/spawners/PointsSpawner.h
 

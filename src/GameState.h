@@ -20,15 +20,14 @@ public:
 
     void changeStateTo(states nextState);
     bool isChanged() const;
-private:
-    bool changed;
-public:
     void setChanged(bool changed);
+    states getCurrent() const;
 
 private:
+    bool changed;
     states current;
-public:
-    states getCurrent() const;
+
+
 
 };
 

@@ -56,8 +56,8 @@ int main() {
                 case states::running:
                     AbstractEntity::deleteExpiredEntities();    //FIXME expired entities not fetched at the right time. Cars are not erased
                     lf.currentLevel->runSpawners(dt);
-                    c.playerInput();
                     AbstractEntity::updateAliveEntities(dt);
+                    c.playerInput();
                     AbstractEntity::handleCollisionsWith(*player);
                     AbstractEntity::updateExpiredEntities();    //todo add expire() method to automate removal from aliveEntity
                     currentStats.setScore(player->getScore())
@@ -84,6 +84,7 @@ int main() {
                     AbstractEntity::deleteExpiredEntities();
                     lf.reset();
                     lf.nextLevel();
+                    currentStats.reset();
                     player = PlayerEntity::spawn();
                     gameState.changeStateTo(states::running);
                     break;
@@ -101,7 +102,7 @@ int main() {
         }
         switch (gameState.getCurrent()) {
             case states::running:
-                s.draw();
+                s.drawGame();
                 s.drawStatSection(currentStats);
                 break;
             case states::intro:

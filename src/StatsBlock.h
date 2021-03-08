@@ -31,8 +31,10 @@ public:
 
     StatsBlock *setLevel(int level);
 
+    void reset();
 private:
     int level;
+
 };
 
 

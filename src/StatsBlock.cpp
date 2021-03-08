@@ -41,3 +41,11 @@ StatsBlock *StatsBlock::setLevel(int level) {
 }
 
 StatsBlock::StatsBlock() : hp(0), fuel(0), score(0), level(0) {}
+
+
+void StatsBlock::reset() {
+    hp = 0;
+    fuel = 0;
+    score = 0;
+    level = 0;
+}

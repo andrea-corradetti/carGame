@@ -143,6 +143,33 @@ UntitledCarGame/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/build
 .PHONY : UntitledCarGame/fast
 
+src/Clock.o: src/Clock.cpp.o
+
+.PHONY : src/Clock.o
+
+# target to build an object file
+src/Clock.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Clock.cpp.o
+.PHONY : src/Clock.cpp.o
+
+src/Clock.i: src/Clock.cpp.i
+
+.PHONY : src/Clock.i
+
+# target to preprocess a source file
+src/Clock.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Clock.cpp.i
+.PHONY : src/Clock.cpp.i
+
+src/Clock.s: src/Clock.cpp.s
+
+.PHONY : src/Clock.s
+
+# target to generate assembly for a file
+src/Clock.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Clock.cpp.s
+.PHONY : src/Clock.cpp.s
+
 src/CollisionHandler.o: src/CollisionHandler.cpp.o
 
 .PHONY : src/CollisionHandler.o
@@ -494,6 +521,33 @@ src/entities/PlayerEntity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.s
 .PHONY : src/entities/PlayerEntity.cpp.s
 
+src/entities/PointsEntity.o: src/entities/PointsEntity.cpp.o
+
+.PHONY : src/entities/PointsEntity.o
+
+# target to build an object file
+src/entities/PointsEntity.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.o
+.PHONY : src/entities/PointsEntity.cpp.o
+
+src/entities/PointsEntity.i: src/entities/PointsEntity.cpp.i
+
+.PHONY : src/entities/PointsEntity.i
+
+# target to preprocess a source file
+src/entities/PointsEntity.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.i
+.PHONY : src/entities/PointsEntity.cpp.i
+
+src/entities/PointsEntity.s: src/entities/PointsEntity.cpp.s
+
+.PHONY : src/entities/PointsEntity.s
+
+# target to generate assembly for a file
+src/entities/PointsEntity.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.s
+.PHONY : src/entities/PointsEntity.cpp.s
+
 src/entities/TestEntity.o: src/entities/TestEntity.cpp.o
 
 .PHONY : src/entities/TestEntity.o
@@ -656,6 +710,33 @@ src/spawners/NailSpawner.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/NailSpawner.cpp.s
 .PHONY : src/spawners/NailSpawner.cpp.s
 
+src/spawners/PointsSpawner.o: src/spawners/PointsSpawner.cpp.o
+
+.PHONY : src/spawners/PointsSpawner.o
+
+# target to build an object file
+src/spawners/PointsSpawner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.o
+.PHONY : src/spawners/PointsSpawner.cpp.o
+
+src/spawners/PointsSpawner.i: src/spawners/PointsSpawner.cpp.i
+
+.PHONY : src/spawners/PointsSpawner.i
+
+# target to preprocess a source file
+src/spawners/PointsSpawner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.i
+.PHONY : src/spawners/PointsSpawner.cpp.i
+
+src/spawners/PointsSpawner.s: src/spawners/PointsSpawner.cpp.s
+
+.PHONY : src/spawners/PointsSpawner.s
+
+# target to generate assembly for a file
+src/spawners/PointsSpawner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/spawners/PointsSpawner.cpp.s
+.PHONY : src/spawners/PointsSpawner.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -665,6 +746,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... UntitledCarGame"
+	@echo "... src/Clock.o"
+	@echo "... src/Clock.i"
+	@echo "... src/Clock.s"
 	@echo "... src/CollisionHandler.o"
 	@echo "... src/CollisionHandler.i"
 	@echo "... src/CollisionHandler.s"
@@ -704,6 +788,9 @@ help:
 	@echo "... src/entities/PlayerEntity.o"
 	@echo "... src/entities/PlayerEntity.i"
 	@echo "... src/entities/PlayerEntity.s"
+	@echo "... src/entities/PointsEntity.o"
+	@echo "... src/entities/PointsEntity.i"
+	@echo "... src/entities/PointsEntity.s"
 	@echo "... src/entities/TestEntity.o"
 	@echo "... src/entities/TestEntity.i"
 	@echo "... src/entities/TestEntity.s"
@@ -722,6 +809,9 @@ help:
 	@echo "... src/spawners/NailSpawner.o"
 	@echo "... src/spawners/NailSpawner.i"
 	@echo "... src/spawners/NailSpawner.s"
+	@echo "... src/spawners/PointsSpawner.o"
+	@echo "... src/spawners/PointsSpawner.i"
+	@echo "... src/spawners/PointsSpawner.s"
 .PHONY : help
 
 

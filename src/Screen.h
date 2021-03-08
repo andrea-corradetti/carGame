@@ -20,14 +20,13 @@ class Screen {
 public:
     Screen(HANDLE hStdin, HANDLE hStdout);
     void clear();
-    void drawInterface();
+
     void eraseEntities(const std::vector<AbstractEntity *>& toErase);
     void drawAll(const std::map<unsigned int, AbstractEntity*>&);
     void refresh();
-    const CONSOLE_SCREEN_BUFFER_INFO &getCsbiInfo() const;
     void drawIntro();
-    //void draw(gameState currGameState);
-    void draw();
+    //void drawGame(gameState currGameState);
+    void drawGame();
     void drawDead(int score);
     void drawStatSection(const StatsBlock &currentStats) ;
 

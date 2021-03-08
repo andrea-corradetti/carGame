@@ -30,12 +30,7 @@ public:
     void moveDown() override;
 
 protected:
-    duration timeElapsed;
     duration coolDown;
-    //std::chrono::steady_clock::time_point start;
-
-
-
     int value;
 public:
     int getValue() const;

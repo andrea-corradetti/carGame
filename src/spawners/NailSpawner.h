@@ -15,13 +15,11 @@ class NailSpawner: public AbstractSpawner {
 public:
     void updateRateMultiplier(unsigned int currentLevelNo) override;
 
-    NailSpawner(unsigned int seed);
+    NailSpawner(unsigned int seed, float baseRate = 1);
 
 protected:
 
     NailEntity *spawnAt(COORD position) override;
-    float computeSpawnRate() override;
-    static const float baseRate;
 };
 
 

@@ -8,6 +8,7 @@
 #include "NailEntity.h"
 #include "NpcEntity.h"
 #include "../globals.h"
+#include "PointsEntity.h"
 
 const COORD spawnPosition {5, 10};
 const COORD playerSize {2, 3};
@@ -56,13 +57,10 @@ void PlayerEntity::collisionWith(AbstractEntity &other) {
         this->score -= nail->getValue();
         this->hp -= 1;
 
-    } else {
-        //todo add default collision
+    } else if (auto points = dynamic_cast<PointsEntity*>(&other)){
+        this->score += points->getValue();
     }
 
-    if (hp <= 0) {
-        die();
-    }
 }
 
 std::wstring *PlayerEntity::getArt() const {
@@ -70,9 +68,13 @@ std::wstring *PlayerEntity::getArt() const {
 }
 
 void PlayerEntity::update(duration dt) {
-    //todo move movement logic here
-}
+    oldPosition = position;
+    fuel -= dt.count();
 
+    if (hp <= 0 || fuel <= 0) {
+        die();
+    }
+}
 
 void PlayerEntity::moveRight() {
     if (getHitbox().Right < gameArea.Right) {
@@ -111,10 +113,14 @@ void PlayerEntity::die() {
     gameState.changeStateTo(states::dead);
 }
 
-unsigned int PlayerEntity::getHp() const {
+int PlayerEntity::getHp() const {
     return hp;
 }
 
-unsigned int PlayerEntity::getFuel() const {
+double PlayerEntity::getFuel() const {
     return fuel;
+}
+
+bool PlayerEntity::checkExpired() {
+    return AbstractEntity::checkExpired();
 }

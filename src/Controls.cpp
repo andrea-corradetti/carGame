@@ -41,7 +41,7 @@ void Controls::introInput() {
         for (i = 0; i < cNumRead; i++) {
             switch (irInBuf[i].EventType) {
                 case KEY_EVENT:
-                    if (irInBuf[i].Event.KeyEvent.wVirtualKeyCode == VK_ESCAPE) {
+                    if (irInBuf[i].Event.KeyEvent.uChar.UnicodeChar == L'q') {
                         gameState.changeStateTo(states::quit);
                     } else {
                         gameState.changeStateTo(states::running);
@@ -80,7 +80,7 @@ void Controls::deadInput() {
         for (i = 0; i < cNumRead; i++) {
             switch (irInBuf[i].EventType) {
                 case KEY_EVENT:
-                    if (irInBuf[i].Event.KeyEvent.wVirtualKeyCode == VK_ESCAPE) {
+                    if (irInBuf[i].Event.KeyEvent.uChar.UnicodeChar == L'q') {
                         gameState.changeStateTo(states::quit);
                     } else {
                         gameState.changeStateTo(states::reset);

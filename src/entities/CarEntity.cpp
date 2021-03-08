@@ -5,14 +5,14 @@
 #include "CarEntity.h"
 #include "NpcEntity.h"
 #include "FuelEntity.h"
+#include "AbstractEntity.h"
 
 #define CAR_SIZE {2, 3}
 
 std::wstring CarEntity::art[] = {L"00", L"II", L"00"};
 
 CarEntity::CarEntity(const COORD &position, unsigned int id)
-: NpcEntity(position, id, CAR_SIZE, duration(1)) {
-    hp = 2;
+: NpcEntity(position, id, CAR_SIZE, duration(1)), hp(2) {
     value = -25;
 }
 

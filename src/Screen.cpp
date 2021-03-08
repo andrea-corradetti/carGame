@@ -53,7 +53,7 @@ void Screen::drawEntity(AbstractEntity &entity) {
         }
     }
 
-    /*draw at the new position*/
+    /*drawGame at the new position*/
     wprintf(CSI L"%d;%df", posY, posX);
     for (int y = 0; y < sizeY; y++) {
         std::wstring sequence = entity.getArt()[y];
@@ -61,8 +61,6 @@ void Screen::drawEntity(AbstractEntity &entity) {
         wprintf(CSI L"%dB", 1);
         wprintf(CSI L"%dD", sizeX);
     }
-
-    entity.setOldPosition(entity.getPosition());    //todo move inside entity class
 }
 
 void Screen::refresh() {
@@ -73,21 +71,10 @@ void Screen::clear() {
     wprintf(L"%s2J", CSI);  //clear the screen
 }
 
-const CONSOLE_SCREEN_BUFFER_INFO &Screen::getCsbiInfo() const {
-    return csbiInfo;
-}
-
 void Screen::drawAll(const std::map<unsigned int, AbstractEntity*>& eMap) {
     for (std::map<int, AbstractEntity*>::value_type e : eMap) {
         drawEntity(*e.second);
     }
-}
-
-void Screen::drawInterface() {
-    wprintf(CSI L"%d;%df", 3, 3); //set cursor position (y, x)
-    drawHorizontalLine(5, true);
-    wprintf(CSI L"%d;%df", 4, 3);
-    drawVerticalLine(5);
 }
 
 void Screen::drawHorizontalLine(int size, bool isTop) {
@@ -154,7 +141,7 @@ void Screen::eraseEntities(const std::vector<AbstractEntity *>& toErase) {
     }
 }
 
-void Screen::draw() {
+void Screen::drawGame() {
     drawAreaBorder(gameArea);
     drawAreaBorder(statsArea);
     drawAll(AbstractEntity::aliveEntities);
@@ -162,7 +149,6 @@ void Screen::draw() {
 }
 
 void Screen::drawStatSection(const StatsBlock& currentStats) {
-    //PlayerEntity* player = dynamic_cast<PlayerEntity *>(AbstractEntity::aliveEntities.at(1)); //todo consider changing player visibility
     wprintf(CSI L"%d;%df", statsArea.Top + 1, statsArea.Left + 1); //set cursor for first line
     wprintf(L"SCORE: %d", currentStats.getScore());
     wprintf(CSI L"%d;%df", statsArea.Top + 3, statsArea.Left + 1);
@@ -179,6 +165,8 @@ void Screen::drawIntro() {
     short posX = 5;
     wprintf(CSI L"%d;%df", posY, posX); //set cursor position
     wprintf(L"PRESS A BUTTON TO START THE GAME");
+    wprintf(CSI L"%d;%df", posY + 2, posX); //set cursor for first line
+    wprintf(L"PRESS q TO QUIT");
 }
 
 
@@ -191,7 +179,7 @@ void Screen::drawDead(int score) {
     wprintf(CSI L"%d;%df", posY + 2, posX);
     wprintf(L"Your score was: %d", score);
     wprintf(CSI L"%d;%df", posY + 4, posX);
-    wprintf(L"Press ESC to quit");
+    wprintf(L"Press q to quit");
     wprintf(CSI L"%d;%df", posY + 6, posX);
     wprintf(L"Press any button to try again");
 

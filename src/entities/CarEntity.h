@@ -10,7 +10,7 @@
 
 class CarEntity : public NpcEntity {
     void act() override;
-    unsigned int hp;
+    int hp;
 
 public:
     CarEntity(const COORD &position, unsigned int id);
