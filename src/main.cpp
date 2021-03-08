@@ -1,5 +1,4 @@
 #include <windows.h>
-#include <chrono>
 
 #include "entities/AbstractEntity.h"
 #include "Screen.h"
@@ -9,70 +8,51 @@
 #include "LevelFactory.h"
 #include "StatsBlock.h"
 #include "entities/PlayerEntity.h"
-
-//todo refactor global variables
-SMALL_RECT gameArea = {
-        3,
-        3,
-        30,
-        20,
-};
-
-SMALL_RECT statsArea = {
-        33,
-        3,
-        53,
-        20
-};
-
-
-GameState gameState;
+#include "Clock.h"
 
 
 int main() {
     /*Setup*/
     bool quit = false;
-    Screen s(GetStdHandle(STD_INPUT_HANDLE), GetStdHandle(STD_OUTPUT_HANDLE));
-    Controls c(GetStdHandle(STD_INPUT_HANDLE));
-    LevelFactory lf;
+    Screen screen(GetStdHandle(STD_INPUT_HANDLE), GetStdHandle(STD_OUTPUT_HANDLE));
+    Controls controls(GetStdHandle(STD_INPUT_HANDLE));
+    LevelFactory levelFactory;
     StatsBlock currentStats;
 
-    lf.nextLevel();
+    levelFactory.nextLevel();
     auto *player = PlayerEntity::spawn();
 
-    duration totalTime(0);                  //todo group functionalities in an object
-    const auto dt = duration(1. / 60);
-    auto start = std::chrono::steady_clock::now();
-    duration accumulator(0);
+    Clock clock;
+    clock.setStartToNow();
 
+    /*Main Game Loop*/
     while(!quit) {
-        auto end = std::chrono::steady_clock::now();
-        duration frameTime = end - start;
-        accumulator += frameTime;
-        start = end;
+        clock.setEndtoNow();
+        clock.updateClockValues();
+
         /*Game Logic*/
-        while (accumulator >= dt) {
+        while (clock.enoughTimeIsElapsed()) {
             switch (gameState.getCurrent()) {
                 case states::running:
-                    AbstractEntity::deleteExpiredEntities();    //FIXME expired entities not fetched at the right time. Cars are not erased
-                    lf.currentLevel->runSpawners(dt);
-                    AbstractEntity::updateAliveEntities(dt);
-                    c.playerInput();
+                    AbstractEntity::deleteExpiredEntities();
+                    levelFactory.currentLevel->runSpawners(clock.getDt());
+                    AbstractEntity::updateAliveEntities(clock.getDt());
+                    controls.playerInput();
                     AbstractEntity::handleCollisionsWith(*player);
-                    AbstractEntity::updateExpiredEntities();    //todo add expire() method to automate removal from aliveEntity
+                    AbstractEntity::updateExpiredEntities();
                     currentStats.setScore(player->getScore())
-                        ->setLevel(lf.getCurrentLevelNo())
+                        ->setLevel(levelFactory.getCurrentLevelNo())
                         ->setHp(player->getHp())
                         ->setFuel(player->getFuel());
-                    lf.updateLevel(currentStats.getScore());
+                    levelFactory.updateLevel(currentStats.getScore());
                     break;
-                case states::menu:
-                    //todo add menu input
+
                 case states::intro:
-                    c.introInput();
+                    controls.introInput();
                     break;
+
                 case states::dead:
-                    c.deadInput();
+                    controls.deadInput();
                     break;
 
                 case states::quit:
@@ -82,37 +62,45 @@ int main() {
                 case states::reset:
                     AbstractEntity::updateExpiredEntities();
                     AbstractEntity::deleteExpiredEntities();
-                    lf.reset();
-                    lf.nextLevel();
+                    levelFactory.resetLevels();
+                    levelFactory.nextLevel();
                     currentStats.reset();
                     player = PlayerEntity::spawn();
                     gameState.changeStateTo(states::running);
                     break;
-            }
 
-            accumulator -= dt;
-            totalTime += dt;
+                default:
+                    //handling unused states. For future implementations
+                    break;
+            }
+            clock.accountForElapsedTime();
         }
 
 
         /*Draw the screen*/
         if (gameState.isChanged()) {
-            s.clear();
+            screen.clear();
             gameState.setChanged(false);
         }
         switch (gameState.getCurrent()) {
             case states::running:
-                s.drawGame();
-                s.drawStatSection(currentStats);
+                screen.drawGame();
+                screen.drawStatSection(currentStats);
                 break;
+
             case states::intro:
-                s.drawIntro();
+                screen.drawIntro();
                 break;
+
             case states::dead:
-                s.drawDead(currentStats.getScore());
+                screen.drawDead(currentStats.getScore());
+                break;
+
+            default:
+                //handling unused states. For future implementations
                 break;
         }
-        s.refresh();
+        screen.refresh();
     }
 
 }

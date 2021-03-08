@@ -1,6 +1,5 @@
 file(REMOVE_RECURSE
   "CMakeFiles/UntitledCarGame.dir/src/Clock.cpp.o"
-  "CMakeFiles/UntitledCarGame.dir/src/CollisionHandler.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/GameState.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o"
@@ -15,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.o"
+  "CMakeFiles/UntitledCarGame.dir/src/globals.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/main.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o"
   "CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o"

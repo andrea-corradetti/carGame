@@ -86,12 +86,6 @@
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Clock.h">
 			<Option target="UntitledCarGame"/>
 		</Unit>
-		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/CollisionHandler.cpp">
-			<Option target="UntitledCarGame"/>
-		</Unit>
-		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/CollisionHandler.h">
-			<Option target="UntitledCarGame"/>
-		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Controls.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
@@ -174,6 +168,9 @@
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.h">
+			<Option target="UntitledCarGame"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.cpp">
 			<Option target="UntitledCarGame"/>
 		</Unit>
 		<Unit filename="/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.h">

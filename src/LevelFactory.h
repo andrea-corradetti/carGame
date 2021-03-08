@@ -14,7 +14,7 @@ public:
     LevelFactory();
     Level* previousLevel();
     Level* nextLevel();
-    void reset();
+    void resetLevels();
     void updateLevel(int score);
     Level* currentLevel;
 

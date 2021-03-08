@@ -41,7 +41,7 @@ Level *LevelFactory::createLevel(const unsigned int seed) {
     return l;
 }
 
-void LevelFactory::reset() {
+void LevelFactory::resetLevels() {
     this->currentLevelNo = 0;
     randGen.seed(randDev());
     generatedLevels.clear();

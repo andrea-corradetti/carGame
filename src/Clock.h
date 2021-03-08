@@ -13,8 +13,22 @@ typedef std::chrono::time_point<std::chrono::steady_clock> timePoint;
 
 class Clock {
 public:
+    Clock();
     Clock(const duration &totalTime, const duration &dt, const timePoint &start, const timePoint &end,
           const duration &accumulator);
+
+    void setStartToNow();
+
+    void setEndtoNow();
+
+    void updateClockValues();
+
+    bool enoughTimeIsElapsed();
+
+    void accountForElapsedTime();
+
+public:
+    const duration &getDt() const;
 
 private:
     const duration dt = duration(1/60.);
@@ -23,6 +37,8 @@ private:
     timePoint end = std::chrono::steady_clock::now();
     duration accumulator = duration(0);
     duration frameTime = duration(0);
+
+
 };
 
 

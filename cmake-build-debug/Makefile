@@ -170,33 +170,6 @@ src/Clock.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/Clock.cpp.s
 .PHONY : src/Clock.cpp.s
 
-src/CollisionHandler.o: src/CollisionHandler.cpp.o
-
-.PHONY : src/CollisionHandler.o
-
-# target to build an object file
-src/CollisionHandler.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/CollisionHandler.cpp.o
-.PHONY : src/CollisionHandler.cpp.o
-
-src/CollisionHandler.i: src/CollisionHandler.cpp.i
-
-.PHONY : src/CollisionHandler.i
-
-# target to preprocess a source file
-src/CollisionHandler.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/CollisionHandler.cpp.i
-.PHONY : src/CollisionHandler.cpp.i
-
-src/CollisionHandler.s: src/CollisionHandler.cpp.s
-
-.PHONY : src/CollisionHandler.s
-
-# target to generate assembly for a file
-src/CollisionHandler.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/CollisionHandler.cpp.s
-.PHONY : src/CollisionHandler.cpp.s
-
 src/Controls.o: src/Controls.cpp.o
 
 .PHONY : src/Controls.o
@@ -575,6 +548,33 @@ src/entities/TestEntity.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.s
 .PHONY : src/entities/TestEntity.cpp.s
 
+src/globals.o: src/globals.cpp.o
+
+.PHONY : src/globals.o
+
+# target to build an object file
+src/globals.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/globals.cpp.o
+.PHONY : src/globals.cpp.o
+
+src/globals.i: src/globals.cpp.i
+
+.PHONY : src/globals.i
+
+# target to preprocess a source file
+src/globals.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/globals.cpp.i
+.PHONY : src/globals.cpp.i
+
+src/globals.s: src/globals.cpp.s
+
+.PHONY : src/globals.s
+
+# target to generate assembly for a file
+src/globals.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/UntitledCarGame.dir/build.make CMakeFiles/UntitledCarGame.dir/src/globals.cpp.s
+.PHONY : src/globals.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -749,9 +749,6 @@ help:
 	@echo "... src/Clock.o"
 	@echo "... src/Clock.i"
 	@echo "... src/Clock.s"
-	@echo "... src/CollisionHandler.o"
-	@echo "... src/CollisionHandler.i"
-	@echo "... src/CollisionHandler.s"
 	@echo "... src/Controls.o"
 	@echo "... src/Controls.i"
 	@echo "... src/Controls.s"
@@ -794,6 +791,9 @@ help:
 	@echo "... src/entities/TestEntity.o"
 	@echo "... src/entities/TestEntity.i"
 	@echo "... src/entities/TestEntity.s"
+	@echo "... src/globals.o"
+	@echo "... src/globals.i"
+	@echo "... src/globals.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

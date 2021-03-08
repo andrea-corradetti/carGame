@@ -5,7 +5,6 @@
 #ifndef UNTITLEDCARGAME_GLOBALS_H
 #define UNTITLEDCARGAME_GLOBALS_H
 
-#include <chrono>
 #include <windows.h>
 #include "GameState.h"
 
@@ -13,7 +12,6 @@
 
 extern SMALL_RECT gameArea;
 extern SMALL_RECT statsArea;
-
 extern GameState gameState ;
 
 

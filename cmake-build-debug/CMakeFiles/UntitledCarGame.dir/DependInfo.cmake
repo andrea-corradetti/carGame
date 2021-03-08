@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Clock.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/Clock.cpp.o"
-  "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/CollisionHandler.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/CollisionHandler.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Controls.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/Controls.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/GameState.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/GameState.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/Level.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/Level.cpp.o"
@@ -20,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PlayerEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/PlayerEntity.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/PointsEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/PointsEntity.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/entities/TestEntity.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/entities/TestEntity.cpp.o"
+  "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/globals.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/globals.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/main.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/main.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/AbstractSpawner.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/spawners/AbstractSpawner.cpp.o"
   "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/src/spawners/CarSpawner.cpp" "/cygdrive/c/Users/Andrea/CLionProjects/UntitledCarGame/cmake-build-debug/CMakeFiles/UntitledCarGame.dir/src/spawners/CarSpawner.cpp.o"
